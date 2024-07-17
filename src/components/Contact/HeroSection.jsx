@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section class="lets-connect">
       <div class="content">
-        <h1>Let's Connect!</h1>
+        <h1>Let&apos;s Connect!</h1>
 
         <p>
           Get in touch with us with any specific inquiries or request more

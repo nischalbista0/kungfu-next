@@ -227,8 +227,8 @@ const HeroSection = () => {
               Kungfu Quiz is a video-based quiz platform that takes a whole now
               level of learning. Utilise any YouTube videos or existing platform
               videos to create interactive quizzes that teachers, students, or
-              any institution can create, share, and play. It's easy to use and
-              makes learning exciting and fun!
+              any institution can create, share, and play. It&apos;s easy to use
+              and makes learning exciting and fun!
             </p>
           </div>
         </div>

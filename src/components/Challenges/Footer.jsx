@@ -1,6 +1,17 @@
-import React from "react";
+import gsap from "gsap";
+import React, { useEffect } from "react";
 
 const Footer = () => {
+  useEffect(() => {
+    gsap.to(".boat-dragon-head", {
+      rotation: 6,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+  }, []);
+
   return (
     <>
       <div class="big-cloud-container">
