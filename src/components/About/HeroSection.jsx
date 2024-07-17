@@ -1,7 +1,10 @@
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useEffect } from "react";
 
 const HeroSection = () => {
+  gsap.registerPlugin(useGSAP);
+
   useEffect(() => {
     const revealWithOpacity = gsap.utils.toArray(".reveal-with-opacity");
     gsap.set(revealWithOpacity, { opacity: 0 });
