@@ -10,26 +10,26 @@ const Challenges = () => {
     <div className="challenges">
       <Header />
 
-      <div class="challenges-main-container">
+      <div className="challenges-main-container">
         <HeroSection />
 
         <ChallengesModes />
       </div>
 
-      <div class="challenges-bottom-cloud">
+      <div className="challenges-bottom-cloud">
         <img src="/img/static/challenges-cloud-down.png" alt="" />
       </div>
 
       <CreateChallengeSection />
 
-      <section class="make-learning-fun">
-        <div class="custom-container">
-          <div class="section-container type-small center">
-            <div class="section-title">
+      <section className="make-learning-fun">
+        <div className="custom-container">
+          <div className="section-container type-small center">
+            <div className="section-title">
               <h1>Make learning fun with Kungfu Quiz</h1>
             </div>
-            <div class="section-link">
-              <a href="#" class="co-btn">
+            <div className="section-link">
+              <a href="#" className="co-btn">
                 <span>Join Now</span>
               </a>
             </div>

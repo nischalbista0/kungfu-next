@@ -10,7 +10,7 @@ const Header = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // ScrollTrigger to toggle the fixed-header class
+    // ScrollTrigger to toggle the fixed-header className
     ScrollTrigger.create({
       trigger: "#header-wrapper",
       start: "top -150px",
@@ -92,7 +92,7 @@ const Header = () => {
     };
   }, [isMobileView]); // Re-run effect when isMobileView changes
 
-  // Dynamic class names
+  // Dynamic className names
   const navWrapperClassName = `nav-wrapper ${
     isMobileView ? "active-sidebar" : ""
   } ${sidebarOpen ? "open" : ""}`;

@@ -37,8 +37,8 @@ const Footer = () => {
 
   return (
     <div>
-      <div class="pillar_container">
-        <div class="pillar-left">
+      <div className="pillar_container">
+        <div className="pillar-left">
           <img
             src="img/static/footer-pillar-right.png"
             alt="Pillar"
@@ -56,11 +56,11 @@ const Footer = () => {
           /> */}
         </div>
 
-        <div class="mountain-tree">
+        <div className="mountain-tree">
           <img src="img/static/mountain-and-tree.png" alt="Mountain Tree" />
         </div>
 
-        <div class="pillar-right">
+        <div className="pillar-right">
           <img
             src="img/static/pillar-right-small.png"
             alt="Pillar"
@@ -74,28 +74,28 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="big-cloud-container">
+      <div className="big-cloud-container">
         {/* <div className="footer-white-left">
           <img src="img/static/footer-white-left.png" alt="Footer White Left" />
         </div> */}
 
-        <div class="image-container cloudbig" id="cloudbig">
+        <div className="image-container cloudbig" id="cloudbig">
           <img src="img/static/Footer_Cloud.svg" alt="Footer Cloud" />
         </div>
       </div>
 
       <footer id="footer-wrapper-type-border">
-        <div class="custom-container">
-          <div class="footer-widget-container">
-            <div class="footer-widget">
-              <div class="logo-container">
+        <div className="custom-container">
+          <div className="footer-widget-container">
+            <div className="footer-widget">
+              <div className="logo-container">
                 <a href="#">
                   <img src="img/logo/Logo_Footer.svg" alt="" />
                 </a>
               </div>
             </div>
-            <div class="footer-widget">
-              <div class="widget-content">
+            <div className="footer-widget">
+              <div className="widget-content">
                 <ul>
                   <li>
                     <a href="<?php echo site_url(); ?>/team/a-team/">
@@ -117,8 +117,8 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div class="footer-widget">
-              <div class="social-widgets">
+            <div className="footer-widget">
+              <div className="social-widgets">
                 <ul>
                   <li>
                     <a
@@ -126,7 +126,7 @@ const Footer = () => {
                       target="_blank"
                       rel="nofollow"
                     >
-                      <div class="image-container">
+                      <div className="image-container">
                         <img
                           src="img/icons/icon-facebook.svg"
                           alt="Facebook logo"
@@ -140,7 +140,7 @@ const Footer = () => {
                       target="_blank"
                       rel="nofollow"
                     >
-                      <div class="image-container">
+                      <div className="image-container">
                         <img
                           src="img/icons/icon-instagram.svg"
                           alt="Instagram logo"
@@ -154,7 +154,7 @@ const Footer = () => {
                       target="_blank"
                       rel="nofollow"
                     >
-                      <div class="image-container">
+                      <div className="image-container">
                         <img
                           src="img/icons/icon-twitter.svg"
                           alt="Twitter logo"
@@ -164,7 +164,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="widget-content">
+              <div className="widget-content">
                 <p>&copy; copyright Kungfuquiz 2024.</p>
               </div>
             </div>

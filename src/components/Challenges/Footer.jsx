@@ -31,20 +31,23 @@ const Footer = () => {
 
   return (
     <>
-      <div class="big-cloud-container">
-        <div class="left-pillar">
+      <div className="big-cloud-container">
+        <div className="left-pillar">
           <img src="/img/static/challenges-pillar-left.png" alt="Pillar" />
         </div>
 
-        <div class="right-pillar">
+        <div className="right-pillar">
           <img src="/img/static/challenges-pillar-right.png" alt="Pillar" />
         </div>
 
-        <div class="panda-with-boat-container" id="panda-with-boat-container">
-          <div class="background">
-            {/* <div class="wave">
+        <div
+          className="panda-with-boat-container"
+          id="panda-with-boat-container"
+        >
+          <div className="background">
+            {/* <div className="wave">
               <svg
-                class="waves"
+                className="waves"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28"
@@ -57,7 +60,7 @@ const Footer = () => {
                     d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
                   />
                 </defs>
-                <g class="parallax">
+                <g className="parallax">
                   <path
                     id="gentle-wave"
                     d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
@@ -69,10 +72,10 @@ const Footer = () => {
             </div> */}
           </div>
 
-          <div class="panda-with-boat" id="panda-with-boat">
+          <div className="panda-with-boat" id="panda-with-boat">
             <img src="/img/static/panda-boat.png" alt="Panda with boat" />
 
-            <div class="boat-dragon-head">
+            <div className="boat-dragon-head">
               <img
                 src="/img/static/boat-dragon-head.png"
                 alt="Panda with boat"
@@ -81,23 +84,23 @@ const Footer = () => {
           </div>
         </div>
 
-        <div class="image-container cloudbig" id="cloudbig">
+        <div className="image-container cloudbig" id="cloudbig">
           <img src="img/static/Footer_Cloud.svg" alt="Footer Cloud" />
         </div>
       </div>
 
       <footer id="footer-wrapper-type-border">
-        <div class="custom-container">
-          <div class="footer-widget-container">
-            <div class="footer-widget">
-              <div class="logo-container">
+        <div className="custom-container">
+          <div className="footer-widget-container">
+            <div className="footer-widget">
+              <div className="logo-container">
                 <a href="#">
                   <img src="img/logo/Logo_Footer.svg" alt="" />
                 </a>
               </div>
             </div>
-            <div class="footer-widget">
-              <div class="widget-content">
+            <div className="footer-widget">
+              <div className="widget-content">
                 <ul>
                   <li>
                     <a href="<?php echo site_url(); ?>/team/a-team/">
@@ -119,8 +122,8 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div class="footer-widget">
-              <div class="social-widgets">
+            <div className="footer-widget">
+              <div className="social-widgets">
                 <ul>
                   <li>
                     <a
@@ -128,7 +131,7 @@ const Footer = () => {
                       target="_blank"
                       rel="nofollow"
                     >
-                      <div class="image-container">
+                      <div className="image-container">
                         <img
                           src="img/icons/icon-facebook.svg"
                           alt="Facebook logo"
@@ -142,7 +145,7 @@ const Footer = () => {
                       target="_blank"
                       rel="nofollow"
                     >
-                      <div class="image-container">
+                      <div className="image-container">
                         <img
                           src="img/icons/icon-instagram.svg"
                           alt="Instagram logo"
@@ -156,7 +159,7 @@ const Footer = () => {
                       target="_blank"
                       rel="nofollow"
                     >
-                      <div class="image-container">
+                      <div className="image-container">
                         <img
                           src="img/icons/icon-twitter.svg"
                           alt="Twitter logo"
@@ -166,7 +169,7 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              <div class="widget-content">
+              <div className="widget-content">
                 <p>&copy; copyright Kungfuquiz 2024.</p>
               </div>
             </div>

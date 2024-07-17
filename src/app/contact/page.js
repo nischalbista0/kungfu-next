@@ -10,10 +10,10 @@ const Contact = () => {
     <div className="contact">
       <Header />
 
-      <div class="contact-main-container">
-        <section class="our-approach" id="content-wrapper">
-          <div class="custom-container remove-padding-top">
-            <div class="contact-container center">
+      <div className="contact-main-container">
+        <section className="our-approach" id="content-wrapper">
+          <div className="custom-container remove-padding-top">
+            <div className="contact-container center">
               <HeroSection />
 
               <ContactForm />

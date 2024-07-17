@@ -3,24 +3,24 @@ import React from "react";
 const HeroSection = () => {
   return (
     <>
-      <div class="challenges-top-cloud">
+      <div className="challenges-top-cloud">
         <img src="/img/static/challenges-cloud-up.png" alt="" />
       </div>
 
-      <section class="create-challenge">
-        <div class="custom-container">
-          <div class="section-container type-small center">
-            {/* <div class="section-title">
-                            <h1 class="type-secondary-color">Create Your Challenge!</h1>
+      <section className="create-challenge">
+        <div className="custom-container">
+          <div className="section-container type-small center">
+            {/* <div className="section-title">
+                            <h1 className="type-secondary-color">Create Your Challenge!</h1>
                         </div> */}
 
-            <div class="section-title">
-              <h1 class="type-secondary-color">
+            <div className="section-title">
+              <h1 className="type-secondary-color">
                 <span>Create</span> <span>Your</span>
                 <span>Challenge!</span>
               </h1>
             </div>
-            <div class="section-body">
+            <div className="section-body">
               <p>
                 Select your video to customise the challenge questions using the
                 available question types, set the passing threshold, and adjust
@@ -30,16 +30,16 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div class="image-container">
-            <div class="left">
+          <div className="image-container">
+            <div className="left">
               <img src="/img/static/left-panda.png" alt="" />
             </div>
 
-            <div class="center">
+            <div className="center">
               <img src="/img/static/screen.png" alt="" />
             </div>
 
-            <div class="right">
+            <div className="right">
               <img src="/img/static/right-panda.png" alt="" />
             </div>
           </div>

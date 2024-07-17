@@ -2,8 +2,8 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <section class="lets-connect">
-      <div class="content">
+    <section className="lets-connect">
+      <div className="content">
         <h1>Let&apos;s Connect!</h1>
 
         <p>
@@ -12,7 +12,7 @@ const HeroSection = () => {
         </p>
       </div>
 
-      <div class="image-container">
+      <div className="image-container">
         <img src="img/static/Contact_Bear.svg" alt="" />
       </div>
     </section>
