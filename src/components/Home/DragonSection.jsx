@@ -10,8 +10,8 @@ const DragonSection = () => {
           </div>
           <div className="section-body">
             <p>
-              Kickstart your learner's journey with our interactive quizzes, and
-              set challenges that encourage them to achieve more
+              Kickstart your learner&apos;s journey with our interactive
+              quizzes, and set challenges that encourage them to achieve more
             </p>
           </div>
         </div>
