@@ -1,0 +1,77 @@
+.pillar_container {
+  position: relative;
+  z-index: 0;
+
+  .pillar-left {
+    position: absolute;
+    left: -28%;
+    bottom: 0;
+    width: 65%;
+    transform: scaleX(-1);
+  }
+
+  // .pillar-left {
+  //   position: absolute;
+  //   left: -15%;
+  //   bottom: 0;
+  //   display: flex;
+  //   width: 50%;
+  //   transform: scaleX(-1);
+
+  //   .pillar-left-small {
+  //     position: absolute;
+  //     bottom: 10vw;
+  //     width: 109%;
+  //     z-index: 1;
+  //     left: 10%;
+  //   }
+
+  //   .pillar-left-big {
+  //     bottom: 6vw;
+  //     width: 80%;
+  //     position: relative;
+  //     left: 40%;
+  //   }
+  // }
+
+  .mountain-tree {
+    position: absolute;
+    left: -10%;
+    bottom: 0;
+    width: 65%;
+  }
+
+  .pillar-right {
+    position: absolute;
+    right: -15%;
+    bottom: 0;
+    display: flex;
+    width: 50%;
+
+    .pillar-right-small {
+      position: absolute;
+      bottom: 20%;
+      width: 109%;
+      z-index: 1;
+      right: 5%;
+    }
+
+    .pillar-right-big {
+      width: 60%;
+      position: relative;
+      right: -30%;
+    }
+  }
+}
+
+.big-cloud-container {
+  position: relative;
+
+  #cloudbig {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    z-index: 2;
+  }
+}

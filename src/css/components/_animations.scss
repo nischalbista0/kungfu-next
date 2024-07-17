@@ -1,0 +1,16 @@
+@-webkit-keyframes up-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-25px); }
+}
+@keyframes up-down {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-25px); }
+}
+@-webkit-keyframes side-side {
+  0% { transform: translateY(0); }
+  100% { transform: translateX(-25px); }
+}
+@keyframes side-side {
+  0% { transform: translateY(0); }
+  100% { transform: translateX(-25px); }
+}

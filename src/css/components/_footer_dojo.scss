@@ -1,0 +1,50 @@
+.swiper-dojo-container {
+  position: relative;
+  max-width: 1200px;
+
+  @media screen and (min-width: 1500px) {
+    max-width: 75vw;
+  }
+
+  .footer-dojo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    // position: absolute;
+    left: 0;
+
+    .light-container {
+      position: absolute;
+      bottom: 300px;
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 100%;
+
+      @media screen and (min-width: 1500px) {
+        bottom: 25vw;
+      }
+    }
+
+    .dojo-with-ground {
+      .dojo-container {
+        position: relative;
+        top: -15vw;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+      }
+
+      .ground-container {
+        position: relative;
+        top: -18vw;
+        z-index: 10;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 100%;
+      }
+    }
+  }
+}

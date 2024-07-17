@@ -1,0 +1,190 @@
+.contact {
+  background-color: $background-color;
+
+  .contact-main-container {
+    padding-top: 148px;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 70px;
+    }
+
+    .contact-container {
+      background-color: $white-color;
+      border-radius: 34px;
+      padding: 60px;
+      display: flex;
+      gap: 4rem;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .lets-connect {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        width: 40%;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+          gap: 3rem;
+        }
+
+        .image-container {
+          display: flex;
+          justify-content: center;
+
+          img {
+            @media screen and (max-width: 1024px) {
+              max-width: 400px;
+            }
+          }
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+
+          h1 {
+            text-align: start;
+
+            @media screen and (max-width: 1024px) {
+              text-align: center;
+            }
+          }
+
+          p {
+            text-align: start;
+            color: $paragraph-color;
+            line-height: 24px;
+
+            @media screen and (max-width: 1024px) {
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 60%;
+
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+
+        .input-with-label {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 0.5rem;
+
+          label {
+            font-weight: 400;
+            color: $label-color;
+          }
+
+          .input {
+            border-radius: 12px;
+            border: 1px solid rgba(102, 102, 102, 0.35);
+            width: 100%;
+            padding: 15px 20px;
+            outline: none;
+            color: $text-color;
+            display: flex;
+            align-items: center;
+
+            .iti {
+              width: 100%;
+
+              .iti__selected-country-primary {
+                padding: 0;
+              }
+            }
+
+            input,
+            textarea {
+              width: 100%;
+              outline: none;
+              border: none;
+            }
+
+            textarea {
+              resize: none;
+            }
+          }
+
+          .dropdown-with-input {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .dropdown {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              cursor: pointer;
+
+              .flag {
+                width: 40px;
+                border-radius: 4px;
+              }
+
+              .arrow {
+                width: 10px;
+              }
+            }
+          }
+        }
+
+        .terms {
+          font-size: 16px;
+          color: $label-color;
+          text-align: start;
+        }
+
+        .form-btn {
+          background-color: #6f0000;
+          color: white;
+          width: fit-content;
+        }
+      }
+
+      @media screen and (max-width: 1399px) {
+        padding: 40px;
+        border-radius: 25px;
+      }
+      @media screen and (max-width: 1024px) {
+        padding: 30px;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  .all-pillars-container {
+    margin-top: 25vw;
+    // position: absolute;
+    position: relative;
+
+    .all-pillars {
+      position: absolute;
+      width: 100%;
+      bottom: -8vw;
+    }
+
+    .mountain-tree {
+      transform: scaleX(-1);
+      z-index: 1;
+      width: 75%;
+      position: absolute;
+      bottom: 5%;
+      right: 0%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.blob {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -100px;
+  height: 300px;
+  width: 300px;
+  pointer-events: none;
+  animation: animatedBlob 10s linear infinite alternate;
+}
+
+@-webkit-keyframes animatedBlob {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(90deg); }
+}
+@keyframes animatedBlob {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(90deg); }
+}

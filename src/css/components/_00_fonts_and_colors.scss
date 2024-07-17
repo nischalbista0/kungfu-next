@@ -1,0 +1,76 @@
+@font-face {
+  font-family: Gang-Of-Three;
+  font-display: swap;
+  // src: url("../fonts/Gang-of-Three-400.ttf");
+  src: url("/fonts/Gang-of-Three-400.ttf");
+}
+@font-face {
+  font-family: General-Sans;
+  font-display: swap;
+  src: url("/fonts/GeneralSans-Regular.otf");
+}
+@font-face {
+  font-family: General-Sans-600;
+  font-display: swap;
+  src: url("/fonts/GeneralSans-Semibold.otf");
+}
+@font-face {
+  font-family: Black-Han-Sans;
+  src: url("/fonts/BlackHanSans-Regular.ttf");
+}
+@font-face {
+  font-family: BIZUD-Regular;
+  src: url("/fonts/BIZUDPGothic-Regular.ttf");
+}
+@font-face {
+  font-family: BIZUD-Bold;
+  src: url("/fonts/BIZUDPGothic-Bold.ttf");
+}
+
+// Fonts Starts
+$gang-400: "Gang-Of-Three";
+$general-400: "General-Sans";
+$general-600: "General-Sans-600";
+$bizud-400: "BIZUD-Regular";
+$bizud-600: "BIZUD-Bold";
+
+$black-han-sans: "Black-Han-Sans";
+// Fonts Ends
+
+// Colors Starts
+$primary-color: #c93228;
+$primary-color-dark: #28bdd7;
+
+$secondary-color: #f09c03;
+$background-color: #ffca6a;
+
+$title-color: #606060;
+$text-color: #000000;
+$white-color: #ffffff;
+$black-color: #000000;
+$paragraph-color: #595959;
+$label-color: #666;
+
+$button-color: #9c4df4;
+$button-color-light: #f2e5ff;
+$button-color-dark: #780ff0;
+$button-color-orange: #ff6652;
+
+$sidenav-background: #121212;
+
+$border-color: #e4ddee;
+// Colors Ends
+
+// Mixins Starts
+.ex-flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+// Mixins Ends

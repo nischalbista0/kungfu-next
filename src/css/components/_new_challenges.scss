@@ -1,0 +1,70 @@
+.new-challenges {
+  .dragon-with-clouds {
+    position: relative;
+
+    @media screen and (max-width: 1275px) {
+      margin-top: 15%;
+    }
+
+    .background-cloud {
+      position: relative;
+      left: -10%;
+      width: 120%;
+      z-index: 1;
+    }
+
+    .dragon-head {
+      position: absolute;
+      top: -30%;
+      right: 0;
+      width: 25%;
+    }
+
+    .dragon-tail {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      z-index: 2;
+      width: 50%;
+
+      .tail-cloud-left {
+        position: absolute;
+        top: -4%;
+        left: -1%;
+        width: 42%;
+      }
+
+      .tail-cloud-right {
+        position: absolute;
+        top: 10%;
+        right: 0%;
+        width: 30%;
+      }
+    }
+
+    .dragon-house {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      z-index: 1;
+      width: 25%;
+    }
+
+    .tail-cloud {
+      position: absolute;
+      top: 23%;
+      left: 0;
+      z-index: 2;
+      width: 35%;
+    }
+
+    .small-tail {
+      position: absolute;
+      bottom: 15%;
+      left: 0;
+      z-index: 2;
+      width: 10%;
+    }
+  }
+}

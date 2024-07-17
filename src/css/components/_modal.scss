@@ -1,0 +1,112 @@
+#loginModal {
+  .modal-dialog-centered {
+    max-width: 1060px;
+    .modal-content {
+      padding: 105px 88px;
+      border-radius: 15px;
+      border: 0;
+      .btn-close {
+        position: absolute;
+        z-index: 1;
+        top: 30px;
+        right: 30px;
+      }
+      .modal-container {
+        @extend .ex-flex;
+        justify-content: space-between;
+        gap: 80px;
+        .modal-item {
+          &:first-child {
+            max-width: 355px;
+            .logo-container {
+              img {
+                display: block;
+                width: 80px;
+                height: auto;
+              }
+            }
+            .section-title {
+              margin: 15px 0 30px 0;
+            }
+            .image-container {
+              width: 100%;
+              max-width: 332px;
+              img {
+                width: 100%;
+                height: auto;
+                display: block;
+              }
+            }
+          }
+          &:nth-child(2) {
+            img {
+              height: 100%;
+              width: auto;
+            }
+          }
+          &:last-child {
+            max-width: 370px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1499px) {
+    .modal-dialog-centered {
+      .modal-content {
+        padding: 80px;
+        .modal-container {
+          gap: 60px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1399px) {
+    .modal-dialog-centered {
+      .modal-content {
+        padding: 60px;
+        .modal-container {
+          gap: 40px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .modal-dialog-centered
+    .modal-content {
+      .modal-container {
+        gap: 30px
+      }
+    }
+  }
+  @media screen and (max-width: 990px) {
+    .modal-dialog-centered {
+      padding: 0 20px;
+      max-width: 550px;
+      .modal-content {
+        padding: 40px 20px;
+        border-radius: 10px;
+        .modal-container {
+          flex-wrap: wrap;
+          .modal-item {
+            width: 100%;
+            &:first-child {
+              max-width: 100%;
+              margin: 0 auto;
+              .image-container {
+                max-width: 100%;
+              }
+            }
+            &:nth-child(2) {
+              display: none;
+            }
+            &:last-child {
+              max-width: 100%;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

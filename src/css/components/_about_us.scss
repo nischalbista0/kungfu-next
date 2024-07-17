@@ -1,0 +1,100 @@
+.about-us {
+  background-color: #ffd170;
+
+  #content-wrapper {
+    margin-top: 0;
+    z-index: 1;
+    position: relative;
+
+    .learn-with-kungfu {
+      padding-top: 148px;
+      position: relative;
+
+      .oval-background {
+        position: absolute;
+        width: 100%;
+        height: 150%;
+        background: #ffca6a;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        border-radius: 0 0 40% 40%;
+      }
+
+      @media screen and (max-width: 768px) {
+        padding-top: 70px;
+      }
+
+      .section-container {
+        .section-banner {
+          .image-container {
+            display: flex;
+            padding: 0 17px;
+
+            img {
+              width: 50%;
+            }
+          }
+        }
+
+        .section-body {
+          color: #595959;
+        }
+      }
+    }
+    .approach-container {
+      background-color: $white-color;
+      border-radius: 34px;
+      padding: 60px;
+      .container-title {
+        margin-bottom: 70px;
+      }
+      position: relative;
+
+      @media screen and (max-width: 1399px) {
+        padding: 40px;
+        border-radius: 25px;
+        .container-title {
+          margin-bottom: 60px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        padding: 30px;
+        border-radius: 15px;
+        .container-title {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    #single-page {
+      .article-content {
+        .custom-container {
+          .section-container {
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  .all-pillars-container {
+    margin-top: 50vw;
+    // position: absolute;
+    position: relative;
+
+    .all-pillars {
+      position: absolute;
+      width: 100%;
+      bottom: -8vw;
+    }
+
+    .mountain-tree {
+      transform: scaleX(-1);
+      z-index: 1;
+      width: 75%;
+      position: absolute;
+      bottom: 5%;
+      right: 0%;
+    }
+  }
+}
