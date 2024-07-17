@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const NinjaScrollSection = () => {
   return (
@@ -20,7 +20,6 @@ const NinjaScrollSection = () => {
           <img src="/img/static/Frame.png" alt="Ninja Scroll" />
 
           <div className="video-container">
-            {/* <video id="video" src="/img/placeholder/placeholder-video.mp4" width="600"></video>  */}
             <video id="video" src="" width="600"></video>
             <img
               src="/img/static/play.png"

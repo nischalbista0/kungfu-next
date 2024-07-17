@@ -8,7 +8,7 @@ const Footer = () => {
 
     // Parallax effect for pillar-right-small
     gsap.to(".pillarsmall", {
-      yPercent: 60, // Adjust the value for desired parallax effect
+      yPercent: 40, // Adjust the value for desired parallax effect
       scale: 0.8,
       ease: "none",
       scrollTrigger: {
@@ -22,7 +22,7 @@ const Footer = () => {
 
     // Parallax effect for pillar-right-big
     gsap.to(".pillarbig", {
-      yPercent: -25, // Adjust the value for desired parallax effect
+      yPercent: -20, // Adjust the value for desired parallax effect
       scale: 1.2,
       ease: "none",
       scrollTrigger: {
