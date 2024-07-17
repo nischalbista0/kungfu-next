@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Footer from "@/components/About/Footer";
 import HeroSection from "@/components/About/HeroSection";
 import OurApproach from "@/components/About/OurApproach";

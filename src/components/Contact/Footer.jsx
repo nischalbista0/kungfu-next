@@ -1,6 +1,34 @@
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useEffect } from "react";
 
 const Footer = () => {
+  gsap.registerPlugin(useGSAP);
+
+  useEffect(() => {
+    gsap.to(".boat-dragon-head", {
+      rotation: 6,
+      duration: 3,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+    });
+
+    const cloudbig = gsap.utils.toArray(".cloudbig");
+    gsap.set(cloudbig, { y: 0 });
+    cloudbig.forEach((box) => {
+      gsap.to(box, {
+        y: 90,
+        scrollTrigger: {
+          trigger: box,
+          scrub: 5,
+          start: "top 100%",
+          end: "bottom",
+        },
+      });
+    });
+  }, []);
+
   return (
     <>
       <div class="all-pillars-container">
