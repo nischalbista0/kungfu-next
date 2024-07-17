@@ -1,54 +1,45 @@
-import IntlTelInput from "intl-tel-input";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+// import "intl-tel-input/build/css/intlTelInput.css";
 
 const ContactForm = () => {
-  return (
-    <form class="contact-form">
-      <div class="input-with-label">
-        <label for="name">Name</label>
+  const phoneInputRef = useRef(null);
 
-        <div class="input">
+  return (
+    <form className="contact-form">
+      <div className="input-with-label">
+        <label htmlFor="name">Name</label>
+        <div className="input">
           <input type="text" id="name" />
         </div>
       </div>
 
-      <div class="input-with-label">
-        <label for="email">Email</label>
-
-        <div class="input">
+      <div className="input-with-label">
+        <label htmlFor="email">Email</label>
+        <div className="input">
           <input type="email" id="email" />
         </div>
       </div>
 
-      <div class="input-with-label">
-        <label for="phone">Phone number</label>
-
-        <div class="input">
-          {/* <input id="phone" type="tel" /> */}
-
-          {/* <IntlTelInput
-            initOptions={{
-              initialCountry: "np",
-              utilsScript: "/intl-tel-input/js/utils.js?1720774106479",
-            }}
-          /> */}
+      <div className="input-with-label">
+        <label htmlFor="phone">Phone number</label>
+        <div className="input">
+          <input id="phone" type="tel" ref={phoneInputRef} />
         </div>
       </div>
 
-      <div class="input-with-label">
-        <label for="name">Message</label>
-
-        <div class="input">
+      <div className="input-with-label">
+        <label htmlFor="message">Message</label>
+        <div className="input">
           <textarea id="message" rows="4"></textarea>
         </div>
       </div>
 
-      <p class="terms">
+      <p className="terms">
         * I agree to be contacted by the Kungfu Quiz team via email or phone
         regarding the mentioned concerns.
       </p>
 
-      <button class="co-btn form-btn">Send</button>
+      <button className="co-btn form-btn">Send</button>
     </form>
   );
 };

@@ -14,7 +14,7 @@ const Footer = () => {
 
         <div class="panda-with-boat-container" id="panda-with-boat-container">
           <div class="background">
-            <div class="wave">
+            {/* <div class="wave">
               <svg
                 class="waves"
                 xmlns="http://www.w3.org/2000/svg"
@@ -35,10 +35,10 @@ const Footer = () => {
                     d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
                     fill="#63C9E9"
                   />
-                  {/* <use xlink:href="#gentle-wave" x="48" y="0" fill="#63C9E9" /> */}
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill="#63C9E9" />
                 </g>
               </svg>
-            </div>
+            </div> */}
           </div>
 
           <div class="panda-with-boat" id="panda-with-boat">
