@@ -216,7 +216,7 @@
         .scroll {
           position: relative;
           width: 85vw;
-          max-width: 800px;
+          max-width: 700px;
           margin: 0 auto;
 
           .left-scroll-handle {
@@ -269,13 +269,25 @@
           }
         }
 
-        @media screen and (min-width: 1500px) {
-          .scroll {
-            width: 50vw;
-            max-width: none;
-          }
-        }
+        // @media screen and (min-width: 1500px) {
+        //   .scroll {
+        //     width: 50vw;
+        //     max-width: none;
+        //   }
+        // }
       }
+    }
+  }
+
+  .big-cloud-container {
+    margin-top: 0;
+
+    @media screen and (min-width: 1200px) {
+      margin-top: 5vw;
+    }
+
+    @media screen and (min-width: 1400px) {
+      margin-top: 8vw;
     }
   }
 }

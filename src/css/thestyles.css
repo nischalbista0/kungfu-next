@@ -1320,6 +1320,10 @@ img {
   z-index: 2;
 }
 
+.swiper-dojo-container {
+  display: flex;
+  justify-content: center;
+}
 .swiper-dojo-container.custom-container {
   padding-bottom: 0;
 }
@@ -1330,6 +1334,7 @@ img {
   align-items: center;
   gap: 2rem;
   position: relative;
+  max-width: 700px;
   z-index: 2;
 }
 .swiper-dojo-container .swiper-container .swiper-description {
@@ -1366,20 +1371,17 @@ img {
   height: 50vw;
 }
 .swiper-dojo-container .swiper-container .dojo-container .dojo {
+  transform: translateX(-50%);
   position: absolute;
-  top: -21vw;
-  left: 0;
+  top: -25%;
+  left: 50%;
+  max-width: 750px;
 }
 .swiper-dojo-container .swiper-container .dojo-container .ground {
   position: absolute;
-  bottom: 5vw;
+  bottom: 0;
   transform: translateX(-50%);
   left: 50%;
-}
-@media screen and (max-width: 1300px) {
-  .swiper-dojo-container .swiper-container .dojo-container .ground {
-    bottom: 0;
-  }
 }
 .swiper-dojo-container .swiper-container .swiper {
   width: 100%;
@@ -1417,12 +1419,6 @@ img {
 
 .swiper-dojo-container {
   position: relative;
-  max-width: 1200px;
-}
-@media screen and (min-width: 1500px) {
-  .swiper-dojo-container {
-    max-width: 75vw;
-  }
 }
 .swiper-dojo-container .footer-dojo-container {
   display: flex;
@@ -1439,11 +1435,6 @@ img {
   padding-top: 0;
   padding-bottom: 0;
   width: 100%;
-}
-@media screen and (min-width: 1500px) {
-  .swiper-dojo-container .footer-dojo-container .light-container {
-    bottom: 25vw;
-  }
 }
 .swiper-dojo-container .footer-dojo-container .dojo-with-ground .dojo-container {
   position: relative;
@@ -1892,7 +1883,7 @@ img {
 .challenges .big-cloud-container .right-pillar {
   position: absolute;
   width: 45%;
-  top: -50%;
+  bottom: 0%;
   right: 0;
 }
 .challenges .big-cloud-container .panda-with-boat-container {
@@ -1901,7 +1892,7 @@ img {
 }
 .challenges .big-cloud-container .panda-with-boat-container .background {
   position: absolute;
-  bottom: 0;
+  bottom: -15%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -1940,11 +1931,13 @@ img {
   max-width: 1298px;
   position: relative;
   left: -1%;
-  margin-top: 12vw;
+  margin-top: 20vw;
+  top: -10vw;
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 992px) {
   .challenges .big-cloud-container .panda-with-boat-container .panda-with-boat {
-    max-width: 1920px;
+    width: 45vw;
+    max-width: 775px;
   }
 }
 .challenges .big-cloud-container .panda-with-boat-container .panda-with-boat .boat-dragon-head {
@@ -2407,7 +2400,7 @@ img {
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll {
   position: relative;
   width: 85vw;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll .left-scroll-handle {
@@ -2453,10 +2446,17 @@ img {
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll .video-container .play-btn:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
-@media screen and (min-width: 1500px) {
-  .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll {
-    width: 50vw;
-    max-width: none;
+.homepage-body .big-cloud-container {
+  margin-top: 0;
+}
+@media screen and (min-width: 1200px) {
+  .homepage-body .big-cloud-container {
+    margin-top: 5vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .homepage-body .big-cloud-container {
+    margin-top: 8vw;
   }
 }
 
@@ -2534,6 +2534,9 @@ img {
   align-items: center;
   justify-content: center;
 }
+.kfq-sample-section .main-state {
+  display: none;
+}
 .kfq-sample-section .video-container video {
   max-width: 100%;
   max-height: 100%;
@@ -2576,6 +2579,7 @@ img {
      -moz-user-select: none;
           user-select: none;
   transform: scale(0);
+  display: none;
 }
 .kfq-sample-section .state-forward,
 .kfq-sample-section .state-backward {

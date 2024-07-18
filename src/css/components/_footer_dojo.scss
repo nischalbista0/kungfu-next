@@ -1,10 +1,9 @@
 .swiper-dojo-container {
   position: relative;
-  max-width: 1200px;
 
-  @media screen and (min-width: 1500px) {
-    max-width: 75vw;
-  }
+  // @media screen and (min-width: 1500px) {
+  //   max-width: 75vw;
+  // }
 
   .footer-dojo-container {
     display: flex;
@@ -23,9 +22,9 @@
       padding-bottom: 0;
       width: 100%;
 
-      @media screen and (min-width: 1500px) {
-        bottom: 25vw;
-      }
+      // @media screen and (min-width: 1500px) {
+      //   bottom: 25vw;
+      // }
     }
 
     .dojo-with-ground {

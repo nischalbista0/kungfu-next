@@ -47,7 +47,7 @@ const Footer = () => {
         start: "top bottom", // Adjust this value to trigger at the correct position
         end: "bottom top",
         scrub: 5,
-        // markers: false,
+        // markers: true,
       },
     });
   }, []);

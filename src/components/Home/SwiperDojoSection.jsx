@@ -57,7 +57,7 @@ const SwiperDojoSection = () => {
               slidesPerView={"2"}
               coverflowEffect={{
                 rotate: 10,
-                stretch: 5,
+                stretch: 10,
                 depth: 100,
                 modifier: 3,
                 slideShadows: true,
