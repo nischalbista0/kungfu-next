@@ -46,31 +46,10 @@ const Footer = () => {
           id="panda-with-boat-container"
         >
           <div className="background">
-            {/* <div className="wave">
-              <svg
-                className="waves"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28"
-                preserveAspectRatio="none"
-                shape-rendering="auto"
-              >
-                <defs>
-                  <path
-                    id="gentle-wave"
-                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-                  />
-                </defs>
-                <g className="parallax">
-                  <path
-                    id="gentle-wave"
-                    d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-                    fill="#63C9E9"
-                  />
-                  <use xlink:href="#gentle-wave" x="48" y="0" fill="#63C9E9" />
-                </g>
-              </svg>
-            </div> */}
+            <div class="ocean">
+              <div class="wave"></div>
+              <div class="wave"></div>
+            </div>
           </div>
 
           <div className="panda-with-boat" id="panda-with-boat">
@@ -104,21 +83,16 @@ const Footer = () => {
               <div className="widget-content">
                 <ul>
                   <li>
-                    <a href="<?php echo site_url(); ?>/team/a-team/">
-                      Classroom Courses
-                    </a>
+                    <a href="#">Contact Us</a>
                   </li>
                   <li>
-                    <a href="#">Virtual Classroom Courses</a>
+                    <a href="#">About Us</a>
                   </li>
                   <li>
-                    <a href="#">E-Learning Courses</a>
+                    <a href="#">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="#">Video Courses</a>
-                  </li>
-                  <li>
-                    <a href="#">Offline Courses</a>
+                    <a href="#">Terms of Use</a>
                   </li>
                 </ul>
               </div>

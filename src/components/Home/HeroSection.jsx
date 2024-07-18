@@ -293,7 +293,7 @@ const HeroSection = () => {
           <div className="section-title">
             <h1>
               <span>Let</span> <span>the</span> <br />
-              <span>games</span> <span>begin!</span>
+              <span>Learning</span> <span>begin!</span>
             </h1>
           </div>
 

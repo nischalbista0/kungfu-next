@@ -33,21 +33,16 @@ const Footer = () => {
               <div className="widget-content">
                 <ul>
                   <li>
-                    <a href="<?php echo site_url(); ?>/team/a-team/">
-                      Classroom Courses
-                    </a>
+                    <a href="#">Contact Us</a>
                   </li>
                   <li>
-                    <a href="#">Virtual Classroom Courses</a>
+                    <a href="#">About Us</a>
                   </li>
                   <li>
-                    <a href="#">E-Learning Courses</a>
+                    <a href="#">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="#">Video Courses</a>
-                  </li>
-                  <li>
-                    <a href="#">Offline Courses</a>
+                    <a href="#">Terms of Use</a>
                   </li>
                 </ul>
               </div>

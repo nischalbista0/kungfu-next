@@ -154,6 +154,7 @@ h6.type-secondary-color {
 h1 {
   font-size: clamp(30px, 3vw, 60px);
   line-height: clamp(35px, 3vw, 60px);
+  text-align: center;
 }
 
 h2 {
@@ -1349,11 +1350,18 @@ img {
   transform: translateX(-50%);
   z-index: 20;
   top: 42%;
-  font-size: clamp(12px, 1.2vw, 25px);
-  line-height: clamp(18px, 1.8vw, 35px);
+  font-size: clamp(12px, 1.3vw, 20px);
+  line-height: clamp(18px, 1.8vw, 30px);
   transition: opacity 0.5s ease;
   opacity: 1;
   transition-behavior: allow-discrete;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.swiper-dojo-container .swiper-container .swiper-description .active-description {
+  font-size: clamp(12px, 1.1vw, 18px);
+  line-height: clamp(18px, 1.6vw, 25px);
 }
 @media screen and (min-width: 1599px) {
   .swiper-dojo-container .swiper-container .swiper-description {
@@ -1720,11 +1728,13 @@ img {
   padding: 20px 8px;
   font-size: clamp(12px, 2vw, 22px);
   cursor: pointer;
+  color: white;
 }
 .challenges .challenges-main-container .challenges-mode-container .challenges-btns-container .challenge-btn.active {
   left: 50%;
   transform: translate(-50%, 0);
   font-weight: 600;
+  color: black;
 }
 .challenges .challenges-main-container .challenges-mode-container .challenges-btns-container .challenge-btn.left {
   left: 0;
@@ -1734,15 +1744,12 @@ img {
 }
 .challenges .challenges-main-container .challenges-mode-container .challenges-btns-container .challenge-btn-1 {
   background-color: #6dcbd3;
-  color: white;
 }
 .challenges .challenges-main-container .challenges-mode-container .challenges-btns-container .challenge-btn-2 {
   background-color: #fecd73;
-  color: black;
 }
 .challenges .challenges-main-container .challenges-mode-container .challenges-btns-container .challenge-btn-3 {
   background-color: #f59495;
-  color: white;
 }
 .challenges .challenges-main-container .challenges-mode-container .active-status-container {
   width: 100%;
@@ -1892,38 +1899,48 @@ img {
 }
 .challenges .big-cloud-container .panda-with-boat-container .background {
   position: absolute;
-  bottom: -15%;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 65%;
   background-color: #63c9e9;
-  /* Animation */
 }
-.challenges .big-cloud-container .panda-with-boat-container .background .waves {
-  position: absolute;
-  top: -10%;
+.challenges .big-cloud-container .panda-with-boat-container .background .ocean {
+  height: 5%;
   width: 100%;
-  height: 15vh;
-  min-height: 100px;
-  max-height: 150px;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  background: #63c9e9;
 }
-.challenges .big-cloud-container .panda-with-boat-container .background .parallax > path {
-  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+.challenges .big-cloud-container .panda-with-boat-container .background .wave {
+  background: url("/img/static/wave.svg") repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
 }
-.challenges .big-cloud-container .panda-with-boat-container .background .parallax > path:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
+.challenges .big-cloud-container .panda-with-boat-container .background .wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
 }
-.challenges .big-cloud-container .panda-with-boat-container .background .parallax > path:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-@keyframes move-forever {
+@keyframes wave {
   0% {
-    transform: translate3d(-90px, 0, 0);
+    margin-left: 0;
   }
   100% {
-    transform: translate3d(85px, 0, 0);
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
   }
 }
 .challenges .big-cloud-container .panda-with-boat-container .panda-with-boat {
@@ -2151,7 +2168,7 @@ img {
   }
 }
 .about-us #content-wrapper .learn-with-kungfu .section-container .section-banner {
-  max-width: 620px;
+  max-width: 700px;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
@@ -2392,10 +2409,8 @@ img {
 }
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll-desc {
   text-align: center;
-  opacity: 0;
+  opacity: 1;
   z-index: 50;
-  font-size: clamp(16px, 1.2vw, 25px);
-  line-height: clamp(25px, 1.8vw, 35px);
 }
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll {
   position: relative;
@@ -2458,6 +2473,9 @@ img {
   .homepage-body .big-cloud-container {
     margin-top: 8vw;
   }
+}
+.homepage-body .new-challenges .section-container.type-small {
+  max-width: 700px;
 }
 
 .new-challenges .dragon-with-clouds {

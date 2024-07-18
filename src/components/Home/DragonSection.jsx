@@ -6,13 +6,18 @@ const DragonSection = () => {
       <div className="custom-container">
         <div className="section-container type-small center">
           <div className="section-title">
-            <h1>Set New Challenges</h1>
+            <h1>Unlock the learning adventure</h1>
           </div>
           <div className="section-body">
             <p>
-              Kickstart your learner&apos;s journey with our interactive
-              quizzes, and set challenges that encourage them to achieve more
+              Integrate a fun way of learning with our interactive quizzes and
+              set challenges to encourage your squad to achieve more.
             </p>
+          </div>
+          <div className="section-link">
+            <a href="#" className="co-btn">
+              <span>Learn More</span>
+            </a>
           </div>
         </div>
       </div>

@@ -207,10 +207,10 @@
 
         .scroll-desc {
           text-align: center;
-          opacity: 0;
+          opacity: 1;
           z-index: 50;
-          font-size: clamp(16px, 1.2vw, 25px);
-          line-height: clamp(25px, 1.8vw, 35px);
+          // font-size: clamp(16px, 1.2vw, 25px);
+          // line-height: clamp(25px, 1.8vw, 35px);
         }
 
         .scroll {
@@ -288,6 +288,14 @@
 
     @media screen and (min-width: 1400px) {
       margin-top: 8vw;
+    }
+  }
+
+  .new-challenges {
+    .section-container {
+      &.type-small {
+        max-width: 700px;
+      }
     }
   }
 }

@@ -49,9 +49,13 @@ const NinjaScrollSection = () => {
   return (
     <section className="ninja-scroll-container">
       <div className="ninja-scroll">
-        <p className="scroll-desc">
-          Youtube-based quizzes to master your learning.
-        </p>
+        {/* <p className="scroll-desc">
+          <strong>Youtube-based quizzes </strong> to master your learning.
+        </p> */}
+        <div className="scroll-desc">
+          <h1>Youtube-based quizzes</h1>
+          <p>to master your learning</p>
+        </div>
 
         <div className="scroll">
           <div className="left-scroll-handle">

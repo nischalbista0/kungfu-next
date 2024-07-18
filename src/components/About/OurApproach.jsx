@@ -22,7 +22,7 @@ const OurApproach = () => {
                 <div className="card-content">
                   <p>
                     Kungfu Quiz transforms traditional learning with interactive
-                    quizzes, making learning as engaging as playing one’s
+                    quizzes, making learning as engaging as playing one&apos;s
                     favorite game.
                   </p>
                 </div>
@@ -60,8 +60,8 @@ const OurApproach = () => {
                 <div className="card-content">
                   <p>
                     Built on a foundation of our advanced pedagogy approach,
-                    Kungfu Quiz goes deeper than memorisation. Our approach
-                    fosters a true understanding of the material.
+                    Kungfu Quiz goes beyond memorisation. Our approach fosters a
+                    true understanding of the material.
                   </p>
                 </div>
               </div>

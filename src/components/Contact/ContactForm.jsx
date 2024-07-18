@@ -14,7 +14,7 @@ const ContactForm = () => {
       </div>
 
       <div className="input-with-label">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email Address</label>
         <div className="input">
           <input type="email" id="email" />
         </div>
@@ -39,7 +39,7 @@ const ContactForm = () => {
         regarding the mentioned concerns.
       </p>
 
-      <button className="co-btn form-btn">Send</button>
+      <button className="co-btn form-btn">Submit Request</button>
     </form>
   );
 };

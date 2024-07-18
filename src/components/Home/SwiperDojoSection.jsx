@@ -8,6 +8,7 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 const SwiperDojoSection = () => {
   const [dojoContainerHeight, setDojoContainerHeight] = useState(0);
   const [activeDescription, setActiveDescription] = useState("");
+  const [activeTitle, setActiveTitle] = useState("");
   const swiperContainerRef = useRef(null);
   const dojoContainerRef = useRef(null);
   const dojoImageRef = useRef(null);
@@ -36,16 +37,17 @@ const SwiperDojoSection = () => {
   }, []);
 
   const updateDescription = (swiper) => {
-    const activeSlide = swiper.slides[swiper.realIndex];
-    const description =
-      activeSlide.querySelector(".swiper-slide").dataset.description;
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const description = activeSlide.getAttribute("data-description");
+    const title = activeSlide.getAttribute("data-title");
     setActiveDescription(description);
+    setActiveTitle(title);
   };
 
   return (
     <section className="custom-container swiper-dojo-container">
       <div className="swiper-container" ref={swiperContainerRef}>
-        <h1 className="swiper-title">Kungfu Modes</h1>
+        <h1 className="swiper-title">Discover the Power of Video-Quizzes</h1>
 
         <div className="swiper kungfu-modes-swiper">
           <div className="swiper-wrapper our-approach">
@@ -66,15 +68,34 @@ const SwiperDojoSection = () => {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
               ref={swiperRef}
-              // after slide
-              // onTransitionEnd={(swiper) => updateDescription(swiper)}
+              onSlideChange={updateDescription}
             >
-              <SwiperSlide>
-                <div
-                  className="swiper-slide swiper-slide--one"
-                  data-description="Description for slide 1"
-                  data-swiper-slide-index="0"
-                >
+              <SwiperSlide
+                data-title="Master It Faster"
+                data-description="Video-based learning and interactive quizzes make information memorable."
+                data-swiper-slide-index="0"
+              >
+                <div>
+                  <div className="swiper-slide swiper-slide--one">
+                    <img
+                      src="img/placeholder/Group.png"
+                      alt=""
+                      className="swiper-placeholder"
+                    />
+                    <img
+                      src="/img/static/Panda.png"
+                      alt=""
+                      className="swiper-image common-card"
+                    />
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                data-title="Challenge Yourself"
+                data-description="Interactive video quizzes improve long-term retention and compete among friends. "
+                data-swiper-slide-index="1"
+              >
+                <div className="swiper-slide swiper-slide--two">
                   <img
                     src="img/placeholder/Group.png"
                     alt=""
@@ -87,12 +108,12 @@ const SwiperDojoSection = () => {
                   />
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="swiper-slide swiper-slide--two"
-                  data-description="Description for slide 2"
-                  data-swiper-slide-index="1"
-                >
+              <SwiperSlide
+                data-title="Active Learning"
+                data-description="Video quizzes help students actively focus on a specific topic and study at their own pace."
+                data-swiper-slide-index="2"
+              >
+                <div className="swiper-slide swiper-slide--three">
                   <img
                     src="img/placeholder/Group.png"
                     alt=""
@@ -105,12 +126,32 @@ const SwiperDojoSection = () => {
                   />
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="swiper-slide swiper-slide--three"
-                  data-description="Description for slide 3"
-                  data-swiper-slide-index="2"
-                >
+              <SwiperSlide
+                data-title="Master It Faster"
+                data-description="Video-based learning and interactive quizzes make information memorable."
+                data-swiper-slide-index="0"
+              >
+                <div>
+                  <div className="swiper-slide swiper-slide--one">
+                    <img
+                      src="img/placeholder/Group.png"
+                      alt=""
+                      className="swiper-placeholder"
+                    />
+                    <img
+                      src="/img/static/Panda.png"
+                      alt=""
+                      className="swiper-image common-card"
+                    />
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide
+                data-title="Challenge Yourself"
+                data-description="Interactive video quizzes improve long-term retention and compete among friends. "
+                data-swiper-slide-index="1"
+              >
+                <div className="swiper-slide swiper-slide--two">
                   <img
                     src="img/placeholder/Group.png"
                     alt=""
@@ -123,12 +164,12 @@ const SwiperDojoSection = () => {
                   />
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="swiper-slide swiper-slide--four"
-                  data-description="Description for slide 4"
-                  data-swiper-slide-index="3"
-                >
+              <SwiperSlide
+                data-title="Active Learning"
+                data-description="Video quizzes help students actively focus on a specific topic and study at their own pace."
+                data-swiper-slide-index="2"
+              >
+                <div className="swiper-slide swiper-slide--three">
                   <img
                     src="img/placeholder/Group.png"
                     alt=""
@@ -145,9 +186,10 @@ const SwiperDojoSection = () => {
           </div>
         </div>
 
-        <p className="custom-container swiper-description">
-          {activeDescription}
-        </p>
+        <div className="custom-container swiper-description">
+          <strong className="active-title">{activeTitle}</strong>
+          <p className="active-description">{activeDescription}</p>
+        </div>
 
         <div
           className="custom-container dojo-container"

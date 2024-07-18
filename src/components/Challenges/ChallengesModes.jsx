@@ -144,23 +144,25 @@ const ChallengesModes = () => {
             className="challenges-description challenge-description-1"
             data-challenge="1"
           >
-            In Feedback Mode, users can provide and receive feedback to improve
-            their skills through constructive criticism.
+            In this mode, Sifus can create custom challenges and provide the
+            correct answers afterward, assisting their squad in learning and
+            mastering complex topics.
           </p>
           <p
             className="challenges-description challenge-description-2 active"
             data-challenge="2"
           >
             In this mode, Sifus can craft tailored challenges to assess their
-            squad’s understanding of any topic. These challenges will test their
-            skills and guide each Ka toward true mastery!
+            squad&apos;s understanding of any topic. These challenges will test
+            their skills and guide each Ka toward true mastery!
           </p>
           <p
             className="challenges-description challenge-description-3"
             data-challenge="3"
           >
-            Game Mode turns learning into an engaging and competitive
-            experience, allowing users to test their knowledge against others.
+            In this mode, Sifus can design custom challenges to share with their
+            squad, while an engaging leaderboard awaits at the end to showcase
+            their mastery and competitive spirit!
           </p>
         </div>
       </div>

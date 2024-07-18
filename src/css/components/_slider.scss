@@ -28,11 +28,19 @@
       transform: translateX(-50%);
       z-index: 20;
       top: 42%;
-      font-size: clamp(12px, 1.2vw, 25px);
-      line-height: clamp(18px, 1.8vw, 35px);
+      font-size: clamp(12px, 1.3vw, 20px);
+      line-height: clamp(18px, 1.8vw, 30px);
       transition: opacity 0.5s ease;
       opacity: 1;
       transition-behavior: allow-discrete;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .active-description {
+        font-size: clamp(12px, 1.1vw, 18px);
+        line-height: clamp(18px, 1.6vw, 25px);
+      }
 
       @media screen and (min-width: 1599px) {
         top: 41%;
