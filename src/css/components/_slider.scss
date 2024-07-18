@@ -27,9 +27,7 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 20;
-      top: 42%;
-      font-size: clamp(12px, 1.3vw, 20px);
-      line-height: clamp(18px, 1.8vw, 30px);
+      top: 44%;
       transition: opacity 0.5s ease;
       opacity: 1;
       transition-behavior: allow-discrete;
@@ -37,17 +35,14 @@
       flex-direction: column;
       gap: 0.5rem;
 
+      .active-title {
+        font-size: clamp(16px, 1.2vw, 24px);
+        line-height: clamp(25px, 1.8vw, 35px);
+      }
+
       .active-description {
-        font-size: clamp(12px, 1.1vw, 18px);
-        line-height: clamp(18px, 1.6vw, 25px);
-      }
-
-      @media screen and (min-width: 1599px) {
-        top: 41%;
-      }
-
-      @media screen and (max-width: 499px) {
-        top: 44%;
+        font-size: clamp(16px, 1.2vw, 22px);
+        line-height: clamp(25px, 1.8vw, 35px);
       }
     }
 

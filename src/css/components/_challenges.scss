@@ -377,7 +377,7 @@
         max-width: 1298px;
         position: relative;
         left: -1%;
-        margin-top: 20vw;
+        margin-top: clamp(150px, 20vw, 400px);
         top: -10vw;
         // max-width: 775px;
 
@@ -425,10 +425,6 @@
       &.custom-container {
         width: 100%;
       }
-    }
-
-    .section-title h1 {
-      color: white;
     }
 
     .quiz-main-container {
@@ -663,6 +659,14 @@
         .submit-btn {
           margin-top: 1rem;
         }
+      }
+    }
+  }
+
+  .make-learning-fun {
+    .section-container {
+      &.type-small {
+        max-width: 620px;
       }
     }
   }

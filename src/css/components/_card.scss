@@ -5,6 +5,12 @@
   .common-card {
     width: 50%;
     padding: 35px 45px;
+
+    p {
+      font-size: clamp(16px, 1.15vw, 22px);
+      line-height: clamp(25px, 1.8vw, 34px);
+    }
+
     .card-section {
       .card-image {
         .image-container {

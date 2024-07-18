@@ -49,21 +49,21 @@ const NinjaScrollSection = () => {
   return (
     <section className="ninja-scroll-container">
       <div className="ninja-scroll">
-        {/* <p className="scroll-desc">
-          <strong>Youtube-based quizzes </strong> to master your learning.
-        </p> */}
         <div className="scroll-desc">
           <h1>Youtube-based quizzes</h1>
-          <p>to master your learning</p>
+          <p>
+            Strengthen your understanding and achieve mastery in your learning
+            journey.
+          </p>
         </div>
 
         <div className="scroll">
           <div className="left-scroll-handle">
-            <img src="/img/static/left-scroll-handle.png" alt="" />
+            <img src="/img/static/left-scroll-handlee.png" alt="" />
           </div>
 
           <div className="right-scroll-handle">
-            <img src="/img/static/right-scroll-handle.png" alt="" />
+            <img src="/img/static/right-scroll-handlee.png" alt="" />
           </div>
 
           <img src="/img/static/Frame.png" alt="Ninja Scroll" />
@@ -86,7 +86,7 @@ const NinjaScrollSection = () => {
       </div>
 
       <div className="bottom-cloud">
-        <img src="/img/static/scroll-cloud-bottom.png" alt="Bottom Cloud" />
+        <img src="/img/static/scroll-bottom-cloud.png" alt="Bottom Cloud" />
       </div>
     </section>
   );

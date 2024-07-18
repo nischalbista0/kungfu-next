@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 const Footer = () => {
   const pillarSmallRef = useRef(null);
   const pillarBigRef = useRef(null);
+  const pillarLeftBigRef = useRef(null);
   const cloudBigRef = useRef(null);
 
   useEffect(() => {
@@ -38,6 +39,20 @@ const Footer = () => {
       },
     });
 
+    // Parallax effect for pillar-right-big
+    gsap.to(pillarLeftBigRef.current, {
+      yPercent: -20, // Adjust the value for desired parallax effect
+      scale: 1.2,
+      ease: "none",
+      scrollTrigger: {
+        trigger: pillarLeftBigRef.current,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 4,
+        yoyo: true,
+      },
+    });
+
     // Parallax effect for big cloud
     gsap.set(cloudBigRef.current, { y: 0 });
     gsap.to(cloudBigRef.current, {
@@ -47,7 +62,7 @@ const Footer = () => {
         start: "top bottom", // Adjust this value to trigger at the correct position
         end: "bottom top",
         scrub: 5,
-        // markers: true,
+        // markers: false,
       },
     });
   }, []);
@@ -60,7 +75,7 @@ const Footer = () => {
             src="img/static/footer-pillar-right.png"
             alt="Pillar"
             className="pillarbig"
-            ref={pillarBigRef}
+            ref={pillarLeftBigRef}
           />
         </div>
 

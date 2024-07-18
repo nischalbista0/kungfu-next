@@ -116,20 +116,22 @@ h1 {
 h2 {
   font-family: $general-600;
   color: $title-color;
-  font-size: 32px;
-  line-height: 37px;
-  @media screen and (max-width: 1599px) {
-    font-size: 25px;
-    line-height: 30px;
-  }
-  @media screen and (max-width: 1399px) {
-    font-size: 20px;
-    line-height: 25px;
-  }
-  @media screen and (max-width: 998px) {
-    font-size: 18px;
-    line-height: 23px;
-  }
+  font-size: clamp(16px, 1.4vw, 26px);
+  line-height: clamp(25px, 1.8vw, 30px);
+  // font-size: 32px;
+  // line-height: 37px;
+  // @media screen and (max-width: 1599px) {
+  //   font-size: 25px;
+  //   line-height: 30px;
+  // }
+  // @media screen and (max-width: 1399px) {
+  //   font-size: 20px;
+  //   line-height: 25px;
+  // }
+  // @media screen and (max-width: 998px) {
+  //   font-size: 18px;
+  //   line-height: 23px;
+  // }
 }
 
 h3 {
@@ -145,7 +147,7 @@ p {
   &:not(:last-of-type) {
     margin-bottom: 18px;
   }
-  font-size: clamp(16px, 1.2vw, 25px);
+  font-size: clamp(16px, 1.2vw, 24px);
   line-height: clamp(25px, 1.8vw, 35px);
 }
 
@@ -332,3 +334,7 @@ img {
 //     transform: rotate(360deg);
 //   }
 // }
+
+.cloudbig {
+  max-height: 700px;
+}

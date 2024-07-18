@@ -199,17 +199,17 @@ const HeroSection = () => {
       }
     );
 
-    gsap.to(".rays", {
-      duration: 0.6,
-      y: "-100%",
-      ease: "power2.out",
-    });
+    // gsap.to(".rays", {
+    //   duration: 0.6,
+    //   y: "100%",
+    //   ease: "power2.out",
+    // });
 
     gsap.to(".rays", {
-      duration: 0.5,
+      duration: 3,
       opacity: 1,
       ease: "power2.out",
-      delay: 0.2,
+      // delay: 0.2,
     });
 
     // gsap.from(".house-center", {

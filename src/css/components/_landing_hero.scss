@@ -20,7 +20,7 @@
 
       .rays {
         position: absolute;
-        bottom: -100%;
+        bottom: 0;
         width: 100%;
         height: 100%;
         background: url("/img/static/rays.png") no-repeat center center;
@@ -108,7 +108,7 @@
           left: 0;
           width: 100%;
           z-index: 11;
-          bottom: -40%;
+          bottom: -20%;
 
           img {
             width: 100%;
@@ -204,11 +204,17 @@
         margin-top: 20px;
         margin-bottom: 20px;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(20px, 3vw, 40px);
 
         .scroll-desc {
           text-align: center;
           opacity: 1;
           z-index: 50;
+          display: flex;
+          flex-direction: column;
+          gap: clamp(14px, 1vw, 20px);
           // font-size: clamp(16px, 1.2vw, 25px);
           // line-height: clamp(25px, 1.8vw, 35px);
         }
@@ -292,6 +298,11 @@
   }
 
   .new-challenges {
+    &.custom-container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     .section-container {
       &.type-small {
         max-width: 700px;

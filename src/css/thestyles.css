@@ -160,26 +160,8 @@ h1 {
 h2 {
   font-family: "General-Sans-600";
   color: #606060;
-  font-size: 32px;
-  line-height: 37px;
-}
-@media screen and (max-width: 1599px) {
-  h2 {
-    font-size: 25px;
-    line-height: 30px;
-  }
-}
-@media screen and (max-width: 1399px) {
-  h2 {
-    font-size: 20px;
-    line-height: 25px;
-  }
-}
-@media screen and (max-width: 998px) {
-  h2 {
-    font-size: 18px;
-    line-height: 23px;
-  }
+  font-size: clamp(16px, 1.4vw, 26px);
+  line-height: clamp(25px, 1.8vw, 30px);
 }
 
 h3 {
@@ -194,7 +176,7 @@ h3 {
 
 p {
   margin: 0;
-  font-size: clamp(16px, 1.2vw, 25px);
+  font-size: clamp(16px, 1.2vw, 24px);
   line-height: clamp(25px, 1.8vw, 35px);
 }
 p:not(:last-of-type) {
@@ -346,6 +328,10 @@ img {
   #content-wrapper {
     margin-top: 70px;
   }
+}
+
+.cloudbig {
+  max-height: 700px;
 }
 
 #header-wrapper {
@@ -857,6 +843,10 @@ img {
   width: 50%;
   padding: 35px 45px;
 }
+.common-card-container .common-card p {
+  font-size: clamp(16px, 1.15vw, 22px);
+  line-height: clamp(25px, 1.8vw, 34px);
+}
 .common-card-container .common-card .card-section .card-image .image-container img {
   width: auto;
   height: 215px;
@@ -1281,7 +1271,7 @@ img {
   position: absolute;
   left: -28%;
   bottom: 0;
-  width: 65%;
+  width: 60%;
   transform: scaleX(-1);
 }
 .pillar_container .mountain-tree {
@@ -1295,7 +1285,7 @@ img {
   right: -15%;
   bottom: 0;
   display: flex;
-  width: 50%;
+  width: 45%;
 }
 .pillar_container .pillar-right .pillar-right-small {
   position: absolute;
@@ -1349,9 +1339,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
-  top: 42%;
-  font-size: clamp(12px, 1.3vw, 20px);
-  line-height: clamp(18px, 1.8vw, 30px);
+  top: 44%;
   transition: opacity 0.5s ease;
   opacity: 1;
   transition-behavior: allow-discrete;
@@ -1359,19 +1347,13 @@ img {
   flex-direction: column;
   gap: 0.5rem;
 }
+.swiper-dojo-container .swiper-container .swiper-description .active-title {
+  font-size: clamp(16px, 1.2vw, 24px);
+  line-height: clamp(25px, 1.8vw, 35px);
+}
 .swiper-dojo-container .swiper-container .swiper-description .active-description {
-  font-size: clamp(12px, 1.1vw, 18px);
-  line-height: clamp(18px, 1.6vw, 25px);
-}
-@media screen and (min-width: 1599px) {
-  .swiper-dojo-container .swiper-container .swiper-description {
-    top: 41%;
-  }
-}
-@media screen and (max-width: 499px) {
-  .swiper-dojo-container .swiper-container .swiper-description {
-    top: 44%;
-  }
+  font-size: clamp(16px, 1.2vw, 22px);
+  line-height: clamp(25px, 1.8vw, 35px);
 }
 .swiper-dojo-container .swiper-container .dojo-container {
   position: relative;
@@ -1948,7 +1930,7 @@ img {
   max-width: 1298px;
   position: relative;
   left: -1%;
-  margin-top: 20vw;
+  margin-top: clamp(150px, 20vw, 400px);
   top: -10vw;
 }
 @media screen and (min-width: 992px) {
@@ -1991,9 +1973,6 @@ img {
   .challenges .create-challenge-container.custom-container {
     width: 100%;
   }
-}
-.challenges .create-challenge-container .section-title h1 {
-  color: white;
 }
 .challenges .create-challenge-container .quiz-main-container {
   background-color: #ffffff;
@@ -2135,6 +2114,9 @@ img {
 .challenges .create-challenge-container .quiz-main-container .quiz-card-container .submit-btn {
   margin-top: 1rem;
 }
+.challenges .make-learning-fun .section-container.type-small {
+  max-width: 620px;
+}
 
 .about-us {
   background-color: #ffd170;
@@ -2249,7 +2231,7 @@ img {
 }
 .homepage-body #home-page .games-begin .rays {
   position: absolute;
-  bottom: -100%;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background: url("/img/static/rays.png") no-repeat center center;
@@ -2324,7 +2306,7 @@ img {
   left: 0;
   width: 100%;
   z-index: 11;
-  bottom: -40%;
+  bottom: -20%;
 }
 .homepage-body #home-page .games-begin .house-container-main .top-cloud-white img {
   width: 100%;
@@ -2406,11 +2388,17 @@ img {
   margin-top: 20px;
   margin-bottom: 20px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 3vw, 40px);
 }
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll-desc {
   text-align: center;
   opacity: 1;
   z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1vw, 20px);
 }
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll .scroll {
   position: relative;
@@ -2473,6 +2461,10 @@ img {
   .homepage-body .big-cloud-container {
     margin-top: 8vw;
   }
+}
+.homepage-body .new-challenges.custom-container {
+  padding-left: 0;
+  padding-right: 0;
 }
 .homepage-body .new-challenges .section-container.type-small {
   max-width: 700px;
