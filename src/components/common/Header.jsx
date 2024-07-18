@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+  const [isMobileView, setIsMobileView] = useState(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
