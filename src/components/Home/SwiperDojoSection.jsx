@@ -1,10 +1,13 @@
 import React, { useEffect, useState, useRef } from "react";
-import Swiper from "swiper";
-import "swiper/swiper-bundle.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
 const SwiperDojoSection = () => {
   const [dojoContainerHeight, setDojoContainerHeight] = useState(0);
+  const [activeDescription, setActiveDescription] = useState("");
   const swiperContainerRef = useRef(null);
   const dojoContainerRef = useRef(null);
   const dojoImageRef = useRef(null);
@@ -32,65 +35,11 @@ const SwiperDojoSection = () => {
     };
   }, []);
 
-  useEffect(() => {
-    swiperRef.current = new Swiper(".kungfu-modes-swiper", {
-      effect: "coverflow",
-      grabCursor: true,
-      centeredSlides: true,
-      coverflowEffect: {
-        rotate: 10,
-        stretch: 10,
-        depth: 100,
-        modifier: 3,
-        slideShadows: true,
-      },
-      loop: true,
-      slidesPerView: 2,
-      fadeEffect: {
-        crossFade: true,
-      },
-      speed: 700,
-    });
-
-    const handleSlideClick = (event) => {
-      const slide = event.currentTarget;
-      const clickedIndex = parseInt(
-        slide.getAttribute("data-swiper-slide-index")
-      );
-      swiperRef.current.slideToLoop(clickedIndex);
-      updateDescription(clickedIndex);
-    };
-
-    const slides = document.querySelectorAll(".swiper-slide");
-    slides.forEach((slide) => {
-      slide.addEventListener("click", handleSlideClick);
-    });
-
-    const initialIndex = swiperRef.current.realIndex;
-    updateDescription(initialIndex);
-
-    return () => {
-      slides.forEach((slide) => {
-        slide.removeEventListener("click", handleSlideClick);
-      });
-      swiperRef.current.destroy(true, true);
-    };
-  }, []);
-
-  const updateDescription = (index) => {
-    const activeSlide = document.querySelector(
-      `.swiper-slide[data-swiper-slide-index="${index}"]`
-    );
-    const newDescription = activeSlide
-      ? activeSlide.getAttribute("data-description")
-      : "";
-    const descriptionElement = document.querySelector(".swiper-description");
-
-    descriptionElement.style.opacity = 0;
-    setTimeout(() => {
-      descriptionElement.textContent = newDescription;
-      descriptionElement.style.opacity = 1;
-    }, 300);
+  const updateDescription = (swiper) => {
+    const activeSlide = swiper.slides[swiper.realIndex];
+    const description =
+      activeSlide.querySelector(".swiper-slide").dataset.description;
+    setActiveDescription(description);
   };
 
   return (
@@ -100,90 +49,105 @@ const SwiperDojoSection = () => {
 
         <div className="swiper kungfu-modes-swiper">
           <div className="swiper-wrapper our-approach">
-            <div
-              className="swiper-slide swiper-slide--one"
-              data-description="Description for slide 1"
-              data-swiper-slide-index="0"
+            <Swiper
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              loop={true}
+              slidesPerView={"2"}
+              coverflowEffect={{
+                rotate: 10,
+                stretch: 10,
+                depth: 100,
+                modifier: 3,
+                slideShadows: true,
+              }}
+              pagination={false}
+              modules={[EffectCoverflow, Pagination]}
+              className="mySwiper"
+              ref={swiperRef}
+              // after slide
+              // onTransitionEnd={(swiper) => updateDescription(swiper)}
             >
-              <img
-                src="img/placeholder/Group.png"
-                alt=""
-                className="swiper-placeholder"
-              />
-              <img
-                src="/img/static/Panda.png"
-                alt=""
-                className="swiper-image common-card"
-              />
-            </div>
-            <div
-              className="swiper-slide swiper-slide--two"
-              data-description="Description for slide 2"
-              data-swiper-slide-index="1"
-            >
-              <img
-                src="img/placeholder/Group.png"
-                alt=""
-                className="swiper-placeholder"
-              />
-              <img
-                src="/img/static/Panda.png"
-                alt=""
-                className="swiper-image common-card"
-              />
-            </div>
-            <div
-              className="swiper-slide swiper-slide--three"
-              data-description="Description for slide 3"
-              data-swiper-slide-index="2"
-            >
-              <img
-                src="img/placeholder/Group.png"
-                alt=""
-                className="swiper-placeholder"
-              />
-              <img
-                src="/img/static/Panda.png"
-                alt=""
-                className="swiper-image common-card"
-              />
-            </div>
-            <div
-              className="swiper-slide swiper-slide--four"
-              data-description="Description for slide 4"
-              data-swiper-slide-index="3"
-            >
-              <img
-                src="img/placeholder/Group.png"
-                alt=""
-                className="swiper-placeholder"
-              />
-              <img
-                src="/img/static/Panda.png"
-                alt=""
-                className="swiper-image common-card"
-              />
-            </div>
-            <div
-              className="swiper-slide swiper-slide--five"
-              data-description="Description for slide 5"
-              data-swiper-slide-index="4"
-            >
-              <img
-                src="img/placeholder/Group.png"
-                alt=""
-                className="swiper-placeholder"
-              />
-              <img
-                src="/img/static/Panda.png"
-                alt=""
-                className="swiper-image common-card"
-              />
-            </div>
+              <SwiperSlide>
+                <div
+                  className="swiper-slide swiper-slide--one"
+                  data-description="Description for slide 1"
+                  data-swiper-slide-index="0"
+                >
+                  <img
+                    src="img/placeholder/Group.png"
+                    alt=""
+                    className="swiper-placeholder"
+                  />
+                  <img
+                    src="/img/static/Panda.png"
+                    alt=""
+                    className="swiper-image common-card"
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div
+                  className="swiper-slide swiper-slide--two"
+                  data-description="Description for slide 2"
+                  data-swiper-slide-index="1"
+                >
+                  <img
+                    src="img/placeholder/Group.png"
+                    alt=""
+                    className="swiper-placeholder"
+                  />
+                  <img
+                    src="/img/static/Panda.png"
+                    alt=""
+                    className="swiper-image common-card"
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div
+                  className="swiper-slide swiper-slide--three"
+                  data-description="Description for slide 3"
+                  data-swiper-slide-index="2"
+                >
+                  <img
+                    src="img/placeholder/Group.png"
+                    alt=""
+                    className="swiper-placeholder"
+                  />
+                  <img
+                    src="/img/static/Panda.png"
+                    alt=""
+                    className="swiper-image common-card"
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div
+                  className="swiper-slide swiper-slide--four"
+                  data-description="Description for slide 4"
+                  data-swiper-slide-index="3"
+                >
+                  <img
+                    src="img/placeholder/Group.png"
+                    alt=""
+                    className="swiper-placeholder"
+                  />
+                  <img
+                    src="/img/static/Panda.png"
+                    alt=""
+                    className="swiper-image common-card"
+                  />
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
 
-        <p className="custom-container swiper-description"></p>
+        <p className="custom-container swiper-description">
+          {activeDescription}
+        </p>
 
         <div
           className="custom-container dojo-container"

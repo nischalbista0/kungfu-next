@@ -22,8 +22,9 @@ const Footer = () => {
         scrollTrigger: {
           trigger: box,
           scrub: 5,
-          start: "top 100%",
+          start: "top 60%",
           end: "bottom",
+          markers: true,
         },
       });
     });

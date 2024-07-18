@@ -10,6 +10,7 @@
     position: fixed;
     background: #fafafacc !important;
     height: 90px;
+    z-index: 50000;
 
     @media screen and (min-width: 768px) {
       .logo {

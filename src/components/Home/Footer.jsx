@@ -1,18 +1,22 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Footer = () => {
+  const pillarSmallRef = useRef(null);
+  const pillarBigRef = useRef(null);
+  const cloudBigRef = useRef(null);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     // Parallax effect for pillar-right-small
-    gsap.to(".pillarsmall", {
+    gsap.to(pillarSmallRef.current, {
       yPercent: 40, // Adjust the value for desired parallax effect
       scale: 0.8,
       ease: "none",
       scrollTrigger: {
-        trigger: ".pillarsmall",
+        trigger: pillarSmallRef.current,
         start: "top bottom", // Start when the top of the element hits the bottom of the viewport
         end: "bottom top", // End when the bottom of the element hits the top of the viewport
         scrub: 4,
@@ -21,16 +25,29 @@ const Footer = () => {
     });
 
     // Parallax effect for pillar-right-big
-    gsap.to(".pillarbig", {
+    gsap.to(pillarBigRef.current, {
       yPercent: -20, // Adjust the value for desired parallax effect
       scale: 1.2,
       ease: "none",
       scrollTrigger: {
-        trigger: ".pillarsmall",
+        trigger: pillarSmallRef.current,
         start: "top bottom",
         end: "bottom top",
         scrub: 4,
         yoyo: true,
+      },
+    });
+
+    // Parallax effect for big cloud
+    gsap.set(cloudBigRef.current, { y: 0 });
+    gsap.to(cloudBigRef.current, {
+      y: 90,
+      scrollTrigger: {
+        trigger: cloudBigRef.current,
+        start: "top bottom", // Adjust this value to trigger at the correct position
+        end: "bottom top",
+        scrub: 5,
+        markers: true,
       },
     });
   }, []);
@@ -43,17 +60,8 @@ const Footer = () => {
             src="img/static/footer-pillar-right.png"
             alt="Pillar"
             className="pillarbig"
+            ref={pillarBigRef}
           />
-          {/* <img
-            src="img/static/pillar-right-small.png"
-            alt="Pillar"
-            className="pillar-left-small pillarsmall"
-          />
-          <img
-            src="img/static/pillar-right-big.png"
-            alt="Pillar"
-            className="pillar-left-big pillarbig"
-          /> */}
         </div>
 
         <div className="mountain-tree">
@@ -65,21 +73,23 @@ const Footer = () => {
             src="img/static/pillar-right-small.png"
             alt="Pillar"
             className="pillar-right-small pillarsmall"
+            ref={pillarSmallRef}
           />
           <img
             src="img/static/pillar-right-big.png"
             alt="Pillar"
             className="pillar-right-big pillarbig"
+            ref={pillarBigRef}
           />
         </div>
       </div>
 
       <div className="big-cloud-container">
-        {/* <div className="footer-white-left">
-          <img src="img/static/footer-white-left.png" alt="Footer White Left" />
-        </div> */}
-
-        <div className="image-container cloudbig" id="cloudbig">
+        <div
+          className="image-container cloudbig"
+          id="cloudbig"
+          ref={cloudBigRef}
+        >
           <img src="img/static/Footer_Cloud.svg" alt="Footer Cloud" />
         </div>
       </div>

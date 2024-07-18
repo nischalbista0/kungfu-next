@@ -83,9 +83,10 @@ const HeroSection = () => {
         y: 90,
         scrollTrigger: {
           trigger: box,
-          scrub: 5,
-          start: "top 100%",
+          scrub: 4,
+          start: "top 60%",
           end: "bottom",
+          markers: true,
         },
       });
     });

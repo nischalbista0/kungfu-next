@@ -214,13 +214,17 @@ const HeroSection = () => {
     //   y: "100%",
     //   ease: "power2.out",
     // });
+    gsap.fromTo(
+      ".house-center",
+      { y: "100%" },
+      { y: "0%", duration: 1, ease: "power2.out" }
+    );
 
-    // gsap.from(".house-left, .house-right", {
-    //   duration: 1,
-    //   y: "100%",
-    //   ease: "power2.out",
-    //   delay: 0.2,
-    // });
+    gsap.fromTo(
+      ".house-left, .house-right",
+      { y: "100%" },
+      { y: "0%", duration: 1, ease: "power2.out", delay: 0.1 }
+    );
 
     gsap.to(".house-container", {
       y: 150,

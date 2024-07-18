@@ -71,11 +71,11 @@ const ChallengesModes = () => {
       button.addEventListener("click", handleClick);
     });
 
-    return () => {
-      buttons.forEach((button) => {
-        button.removeEventListener("click", handleClick);
-      });
-    };
+    // return () => {
+    //   buttons.forEach((button) => {
+    //     button.removeEventListener("click", handleClick);
+    //   });
+    // };
   }, []);
 
   return (

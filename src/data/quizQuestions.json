@@ -1,0 +1,65 @@
+{
+  "videoLength": "00:20:00",
+  "quiz": [
+    {
+      "timestamp": "00:02:15",
+      "title": "Quiz 1",
+      "question": "What is the name of the main character in Big Buck Bunny?",
+      "options": [
+        "Tiny",
+        "Buck",
+        "Bunny",
+        "Big Buck Bunny"
+      ],
+      "correctAnswer": "Big Buck Bunny"
+    },
+    {
+      "timestamp": "00:05:30",
+      "title": "Quiz 2",
+      "question": "What kind of animals are the antagonists in Big Buck Bunny?",
+      "options": [
+        "Foxes",
+        "Birds",
+        "Squirrels",
+        "Mice"
+      ],
+      "correctAnswer": "Squirrels"
+    },
+    {
+      "timestamp": "00:10:45",
+      "title": "Quiz 3",
+      "question": "What does Big Buck Bunny enjoy doing at the beginning of the video?",
+      "options": [
+        "Running",
+        "Flying",
+        "Gardening",
+        "Collecting flowers"
+      ],
+      "correctAnswer": "Collecting flowers"
+    },
+    {
+      "timestamp": "00:15:00",
+      "title": "Quiz 4",
+      "question": "How does Big Buck Bunny deal with the antagonists?",
+      "options": [
+        "Ignores them",
+        "Tricks them",
+        "Fights them",
+        "Scares them away"
+      ],
+      "correctAnswer": "Tricks them"
+    },
+    {
+      "timestamp": "00:18:30",
+      "title": "Quiz 5",
+      "question": "What is the overall theme of Big Buck Bunny?",
+      "options": [
+        "Revenge",
+        "Friendship",
+        "Adventure",
+        "Comedy"
+      ],
+      "correctAnswer": "Comedy"
+    }
+  ]
+}

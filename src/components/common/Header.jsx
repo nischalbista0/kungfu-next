@@ -1,81 +1,95 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
-  const menuToggleRef = useRef(null);
-  const mobileToggleRef = useRef(null);
-  const navOverlayRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    // ScrollTrigger to toggle the fixed-header className
+    ScrollTrigger.create({
+      trigger: "#header-wrapper",
+      start: "top -150px",
+      onEnter: () => {
+        const headerWrapper = document.getElementById("header-wrapper");
+        headerWrapper.classList.add("fixed-header");
+
+        // set opacity 0
+        gsap.set(headerWrapper, { opacity: 0 });
+
+        // Add a GSAP Tween to animate opacity from 0 to 1
+        gsap.to(headerWrapper, { opacity: 1, duration: 0.5 });
+      },
+      onLeaveBack: () => {
+        const headerWrapper = document.getElementById("header-wrapper");
+        headerWrapper.classList.remove("fixed-header");
+      },
+    });
+
+    // Function to toggle menu icon
     const toggleMenuIcon = () => {
       setMenuOpen(!menuOpen);
     };
 
+    // Function to toggle sidebar on mobile
     const toggleSidebar = () => {
       setSidebarOpen(!sidebarOpen);
     };
 
-    const handleNavOverlayClick = () => {
+    const handleOverlayClick = () => {
       setSidebarOpen(false);
       setMenuOpen(false);
     };
 
-    const menuToggle = menuToggleRef.current;
-    const mobileToggle = mobileToggleRef.current;
-    const navOverlay = navOverlayRef.current;
+    // Add event listeners when component mounts
+    const menuToggleElement = document.querySelector(".menu-toggle");
+    const mobileToggleElement = document.querySelector(".mobile-toggle");
+    const navOverlayElement = document.querySelector(".nav-overlay");
 
-    if (menuToggle) {
-      menuToggle.addEventListener("click", toggleMenuIcon);
-    }
-
-    if (mobileToggle) {
-      mobileToggle.addEventListener("click", toggleSidebar);
-    }
-
-    if (navOverlay) {
-      navOverlay.addEventListener("click", handleNavOverlayClick);
+    if (menuToggleElement && mobileToggleElement && navOverlayElement) {
+      menuToggleElement.addEventListener("click", toggleMenuIcon);
+      mobileToggleElement.addEventListener("click", toggleSidebar);
+      navOverlayElement.addEventListener("click", handleOverlayClick);
     }
 
     // Clean up event listeners when component unmounts
     return () => {
-      if (menuToggle) {
-        menuToggle.removeEventListener("click", toggleMenuIcon);
-      }
-
-      if (mobileToggle) {
-        mobileToggle.removeEventListener("click", toggleSidebar);
-      }
-
-      if (navOverlay) {
-        navOverlay.removeEventListener("click", handleNavOverlayClick);
+      if (menuToggleElement && mobileToggleElement && navOverlayElement) {
+        menuToggleElement.removeEventListener("click", toggleMenuIcon);
+        mobileToggleElement.removeEventListener("click", toggleSidebar);
+        navOverlayElement.removeEventListener("click", handleOverlayClick);
       }
     };
   }, [menuOpen, sidebarOpen]); // Dependencies ensure effect updates when state changes
 
   useEffect(() => {
+    // Function to handle media query change
     const handleResize = () => {
       setIsMobileView(window.innerWidth <= 768);
+      // If not mobile view, close the sidebar
       if (!isMobileView) {
         setMenuOpen(false);
         setSidebarOpen(false);
       }
     };
 
+    // Initial check on component mount
     handleResize();
 
+    // Add event listener for window resize
     window.addEventListener("resize", handleResize);
 
+    // Clean up event listener when component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isMobileView]);
+  }, [isMobileView]); // Re-run effect when isMobileView changes
 
+  // Dynamic className names
   const navWrapperClassName = `nav-wrapper ${
     isMobileView ? "active-sidebar" : ""
   } ${sidebarOpen ? "open" : ""}`;
@@ -94,7 +108,7 @@ const Header = () => {
             </a>
           </div>
           <div className="nav-bar">
-            <div className={navWrapperClassName} ref={navOverlayRef}>
+            <div className={navWrapperClassName}>
               <div className="nav-wrapper-inner">
                 <div className="menu-menu-container">
                   <ul id="menu-menu" className="menu">
@@ -118,9 +132,9 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className={navOverlayClassName} ref={mobileToggleRef}></div>
+            <div className={navOverlayClassName}></div>
           </div>
-          <div className="mobile-toggle" ref={menuToggleRef}>
+          <div className="mobile-toggle">
             <div className={`menu-toggle ${menuOpen ? "change" : ""}`}>
               <div className="bar"></div>
               <div className="bar"></div>
