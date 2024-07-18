@@ -133,9 +133,9 @@ const HeroSection = () => {
             stagger: 2,
             scrub: 1,
             onEnter: () => gsap.to(box, { y: 0, opacity: 1, duration: 1 }),
-            onLeave: () => gsap.to(box, { y: -50, opacity: 0 }),
-            onEnterBack: () => gsap.to(box, { y: 0, opacity: 1 }),
-            onLeaveBack: () => gsap.to(box, { y: 50, opacity: 0 }),
+            // onLeave: () => gsap.to(box, { y: -50, opacity: 0 }),
+            // onEnterBack: () => gsap.to(box, { y: 0, opacity: 1 }),
+            // onLeaveBack: () => gsap.to(box, { y: 50, opacity: 0 }),
             markers: false,
           },
         });

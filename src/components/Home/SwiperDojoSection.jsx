@@ -4,6 +4,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 
 const SwiperDojoSection = () => {
   const [dojoContainerHeight, setDojoContainerHeight] = useState(0);
@@ -13,6 +16,32 @@ const SwiperDojoSection = () => {
   const dojoContainerRef = useRef(null);
   const dojoImageRef = useRef(null);
   const swiperRef = useRef(null);
+
+  gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.utils.toArray(".our-approach").forEach((section) => {
+      const elems = section.querySelectorAll(".common-card");
+      gsap.set(elems, { y: 50, opacity: 0 });
+      elems.forEach((box, index) => {
+        gsap.to(box, {
+          scrollTrigger: {
+            trigger: box,
+            start: "top 100%",
+            end: "bottom 20%",
+            stagger: 2,
+            scrub: 1,
+            onEnter: () => gsap.to(box, { y: 0, opacity: 1, duration: 1 }),
+            onLeave: () => gsap.to(box, { y: -50, opacity: 0 }),
+            onEnterBack: () => gsap.to(box, { y: 0, opacity: 1 }),
+            onLeaveBack: () => gsap.to(box, { y: 50, opacity: 0 }),
+            markers: false,
+          },
+        });
+      });
+    });
+  }, []);
 
   useEffect(() => {
     const dojoImage = dojoImageRef.current;
@@ -71,8 +100,8 @@ const SwiperDojoSection = () => {
               onSlideChange={updateDescription}
             >
               <SwiperSlide
-                data-title="Master It Faster"
-                data-description="Video-based learning and interactive quizzes make information memorable."
+                data-title="Quick Mastery"
+                data-description="Video-based learning and interactive quizzes make it easy to understand and quickly master the topics. "
                 data-swiper-slide-index="0"
               >
                 <div>
@@ -83,7 +112,7 @@ const SwiperDojoSection = () => {
                       className="swiper-placeholder"
                     />
                     <img
-                      src="/img/static/Panda.png"
+                      src="/img/static/mastery.png"
                       alt=""
                       className="swiper-image common-card"
                     />
@@ -102,7 +131,7 @@ const SwiperDojoSection = () => {
                     className="swiper-placeholder"
                   />
                   <img
-                    src="/img/static/Panda.png"
+                    src="/img/static/challenge.png"
                     alt=""
                     className="swiper-image common-card"
                   />
@@ -120,15 +149,15 @@ const SwiperDojoSection = () => {
                     className="swiper-placeholder"
                   />
                   <img
-                    src="/img/static/Panda.png"
+                    src="/img/static/learning.png"
                     alt=""
-                    className="swiper-image common-card"
+                    className="swiper-image common-card learning"
                   />
                 </div>
               </SwiperSlide>
               <SwiperSlide
-                data-title="Master It Faster"
-                data-description="Video-based learning and interactive quizzes make information memorable."
+                data-title="Quick Mastery"
+                data-description="Video-based learning and interactive quizzes make it easy to understand and quickly master the topics. "
                 data-swiper-slide-index="0"
               >
                 <div>
@@ -139,7 +168,7 @@ const SwiperDojoSection = () => {
                       className="swiper-placeholder"
                     />
                     <img
-                      src="/img/static/Panda.png"
+                      src="/img/static/mastery.png"
                       alt=""
                       className="swiper-image common-card"
                     />
@@ -158,7 +187,7 @@ const SwiperDojoSection = () => {
                     className="swiper-placeholder"
                   />
                   <img
-                    src="/img/static/Panda.png"
+                    src="/img/static/challenge.png"
                     alt=""
                     className="swiper-image common-card"
                   />
@@ -176,9 +205,9 @@ const SwiperDojoSection = () => {
                     className="swiper-placeholder"
                   />
                   <img
-                    src="/img/static/Panda.png"
+                    src="/img/static/learning.png"
                     alt=""
-                    className="swiper-image common-card"
+                    className="swiper-image common-card learning"
                   />
                 </div>
               </SwiperSlide>

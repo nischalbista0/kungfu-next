@@ -15,7 +15,7 @@ const DragonSection = () => {
             </p>
           </div>
           <div className="section-link">
-            <a href="#" className="co-btn">
+            <a href="challenges" className="co-btn">
               <span>Learn More</span>
             </a>
           </div>
@@ -32,7 +32,7 @@ const DragonSection = () => {
         </div>
 
         <div className="dragon-tail">
-          <img src="/img/static/dragon-tail.png" alt="Dragon" />
+          <img src="/img/static/tail-dragon.png" alt="Dragon" />
 
           <div className="tail-cloud-left">
             <img src="/img/static/tail_cloud_left.png" alt="Tail Cloud" />

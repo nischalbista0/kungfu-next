@@ -16,6 +16,10 @@
     max-width: 700px;
     z-index: 2;
 
+    .swiper-title {
+      max-width: 640px;
+    }
+
     .swiper-description {
       color: #454545;
       text-align: center;
@@ -100,6 +104,10 @@
           max-width: 50%;
           opacity: 0.5;
           // transition: all 1s ease;
+        }
+
+        .learning {
+          min-width: 70%;
         }
       }
 
