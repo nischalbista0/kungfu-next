@@ -10,6 +10,11 @@
       padding-top: 148px;
       position: relative;
 
+      .custom-container {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+      }
+
       .oval-background {
         position: absolute;
         width: 100%;
@@ -27,6 +32,9 @@
 
       .section-container {
         .section-banner {
+          max-width: 620px;
+          margin: 0 auto;
+          margin-bottom: 2rem;
           .image-container {
             display: flex;
             padding: 0 17px;

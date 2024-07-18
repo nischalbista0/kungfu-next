@@ -1,9 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import React, { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const HeroSection = () => {
   gsap.registerPlugin(useGSAP);
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     const revealWithOpacity = gsap.utils.toArray(".reveal-with-opacity");

@@ -78,6 +78,7 @@ const HeroSection = () => {
           // scrub: 1.5,
           // stagger: 2,
           scrub: 2,
+          once: true,
         },
       }
     );
@@ -94,6 +95,7 @@ const HeroSection = () => {
           // scrub: 1.5,
           // stagger: 2,
           scrub: 2,
+          once: true,
         },
       }
     );
@@ -109,6 +111,7 @@ const HeroSection = () => {
           end: "bottom center",
           scrub: 1.5,
           stagger: 2,
+          once: true,
         },
       }
     );

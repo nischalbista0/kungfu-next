@@ -28,6 +28,16 @@
     .create-challenge {
       position: relative;
       z-index: 1;
+
+      // &.section-container .type-small {
+      //   max-width: 1200px !important;
+      // }
+
+      .custom-container {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+      }
+
       .image-container {
         margin-top: 3rem;
         position: relative;
@@ -36,6 +46,16 @@
         align-items: end;
         justify-content: center;
         width: 100%;
+        margin: 0 auto;
+        margin-top: 3rem;
+
+        @media screen and (min-width: 900px) {
+          max-width: 80%;
+        }
+
+        @media screen and (min-width: 1200px) {
+          max-width: 60%;
+        }
 
         .left {
           position: relative;

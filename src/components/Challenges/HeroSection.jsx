@@ -10,14 +10,9 @@ const HeroSection = () => {
       <section className="create-challenge">
         <div className="custom-container">
           <div className="section-container type-small center">
-            {/* <div className="section-title">
-                            <h1 className="type-secondary-color">Create Your Challenge!</h1>
-                        </div> */}
-
             <div className="section-title">
               <h1 className="type-secondary-color">
-                <span>Create</span> <span>Your</span>
-                <span>Challenge!</span>
+                <span>Create</span> <span>Your</span> <span>Challenge!</span>
               </h1>
             </div>
             <div className="section-body">
