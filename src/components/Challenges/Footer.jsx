@@ -24,7 +24,7 @@ const Footer = () => {
           scrub: 5,
           start: "top 60%",
           end: "bottom",
-          markers: true,
+          // markers: false,
         },
       });
     });

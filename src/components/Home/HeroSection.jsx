@@ -233,7 +233,7 @@ const HeroSection = () => {
         start: "top 50%",
         end: "bottom top",
         scrub: 4,
-        // markers: true,
+        // markers: false,
       },
     });
 
@@ -270,7 +270,7 @@ const HeroSection = () => {
           end: "bottom 90%",
           scrub: 4,
           yoyo: true,
-          // markers: true,
+          // markers: false,
         },
       }
     );
