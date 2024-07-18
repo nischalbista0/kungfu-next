@@ -496,7 +496,7 @@ const CreateChallengeSection = () => {
       <div className="custom-container create-challenge-container">
         <div className="section-container type-small center">
           <div className="section-title">
-            <h1>Create Your Challenge!</h1>
+            <h1>Give it a try!</h1>
           </div>
         </div>
 
