@@ -33,9 +33,9 @@ const Footer = () => {
   return (
     <>
       <div className="all-pillars-container">
-        <div className="all-pillars">
+        {/* <div className="all-pillars">
           <img src="img/static/all-pillars.png" alt="Pillars" />
-        </div>
+        </div> */}
 
         <div className="mountain-tree">
           <img src="img/static/mountain-and-tree.png" alt="Mountain Tree" />

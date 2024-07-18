@@ -1450,11 +1450,16 @@ img {
 
 .contact {
   background-color: #ffca6a;
+  background: url("/img/static/all-pillars.png") no-repeat;
+  bottom: 0;
+  background-size: 100% 80%;
+  background-position: bottom;
 }
 .contact .contact-main-container {
   padding-top: 148px;
   position: relative;
   z-index: 2;
+  min-height: 100vh;
 }
 @media screen and (max-width: 768px) {
   .contact .contact-main-container {
