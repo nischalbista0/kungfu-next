@@ -1289,7 +1289,7 @@ img {
 }
 .pillar_container .pillar-right .pillar-right-small {
   position: absolute;
-  bottom: 20%;
+  bottom: 0%;
   width: 109%;
   z-index: 1;
   right: 5%;
@@ -1582,7 +1582,7 @@ img {
   text-align: start;
 }
 .contact .contact-main-container .contact-container .contact-form .form-btn {
-  background-color: #6f0000;
+  background-color: #c93228;
   color: white;
   width: -moz-fit-content;
   width: fit-content;
@@ -2463,8 +2463,8 @@ img {
   }
 }
 .homepage-body .new-challenges.custom-container {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 .homepage-body .new-challenges .section-container.type-small {
   max-width: 700px;

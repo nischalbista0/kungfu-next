@@ -2,7 +2,7 @@ import React from "react";
 
 const DragonSection = () => {
   return (
-    <section className="new-challenges custom-container">
+    <section className="new-challenges">
       <div className="custom-container">
         <div className="section-container type-small center">
           <div className="section-title">

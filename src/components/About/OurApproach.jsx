@@ -88,6 +88,31 @@ const OurApproach = () => {
           </div>
         </div>
       </div>
+
+      <div className="custom-container">
+        <div className="section-container type-small center">
+          <div className="section-title">
+            <h1>Make learning fun with Kungfu Quiz </h1>
+          </div>
+          {/* <div className="section-body">
+            <p>
+              Integrate a fun way of learning with our interactive quizzes and
+              set challenges to encourage your squad to achieve more.
+            </p>
+          </div> */}
+          <div className="section-link">
+            <a href="#" className="co-btn">
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style={{
+          height: "50vh",
+        }}
+      ></div>
     </section>
   );
 };
