@@ -2364,6 +2364,32 @@ img {
 .homepage-body #home-page .games-begin .house-container-main .top-cloud-blue img {
   width: 100%;
 }
+@media screen and (min-width: 1600px) {
+  .homepage-body #home-page .games-begin .house-container-main .top-cloud-white {
+    height: 500px;
+  }
+  .homepage-body #home-page .games-begin .house-container-main .top-cloud-white img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+  .homepage-body #home-page .games-begin .house-container-main .top-cloud-blue {
+    height: 700px;
+  }
+  .homepage-body #home-page .games-begin .house-container-main .top-cloud-blue img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: fill;
+       object-fit: fill;
+    -o-object-position: bottom;
+       object-position: bottom;
+  }
+}
 @media screen and (max-width: 768px) {
   .homepage-body #home-page .games-begin {
     padding-top: 70px;
@@ -2424,7 +2450,7 @@ img {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 99%;
+  top: 95%;
   z-index: 20;
 }
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll {

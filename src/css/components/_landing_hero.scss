@@ -126,6 +126,32 @@
             width: 100%;
           }
         }
+
+        @media screen and (min-width: 1600px) {
+          .top-cloud-white {
+            height: 500px;
+
+            img {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              object-fit: fill;
+              object-position: bottom;
+            }
+          }
+
+          .top-cloud-blue {
+            height: 700px;
+
+            img {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              object-fit: fill;
+              object-position: bottom;
+            }
+          }
+        }
       }
     }
 
@@ -196,7 +222,7 @@
         position: absolute;
         width: 100%;
         left: 0;
-        top: 99%;
+        top: 95%;
         z-index: 20;
       }
 

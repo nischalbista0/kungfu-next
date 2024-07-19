@@ -132,20 +132,20 @@ const HeroSection = () => {
     //   }
     // );
 
-    gsap.fromTo(
-      ".ninja-scroll-container .bottom-cloud",
-      { y: "0" },
-      {
-        y: "-20%",
-        scrollTrigger: {
-          trigger: ".bottom-cloud",
-          start: "top 70%",
-          end: "bottom 90%",
-          scrub: 4,
-          yoyo: true,
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   ".ninja-scroll-container .bottom-cloud",
+    //   { y: "0" },
+    //   {
+    //     y: "-20%",
+    //     scrollTrigger: {
+    //       trigger: ".bottom-cloud",
+    //       start: "top 70%",
+    //       end: "bottom 90%",
+    //       scrub: 4,
+    //       yoyo: true,
+    //     },
+    //   }
+    // );
 
     gsap.to(".dragon-house", {
       duration: 2.5,
@@ -242,7 +242,7 @@ const HeroSection = () => {
 
     gsap.from(".top-cloud-white, .top-cloud-blue", {
       duration: 1,
-      y: "100%",
+      y: "80%",
       ease: "power2.out",
       stagger: 0.1,
     });
@@ -251,7 +251,7 @@ const HeroSection = () => {
       ".top-cloud-white",
       { y: "0" },
       {
-        y: "-5%",
+        y: "0",
         scrollTrigger: {
           trigger: ".house-container",
           start: "top 45%",
