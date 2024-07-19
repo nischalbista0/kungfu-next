@@ -3,7 +3,7 @@
 
   #content-wrapper {
     margin-top: 0;
-    z-index: 1;
+    z-index: 3;
     position: relative;
 
     .learn-with-kungfu {
@@ -54,6 +54,7 @@
       background-color: $white-color;
       border-radius: 34px;
       padding: 60px;
+
       .container-title {
         margin-bottom: 70px;
       }
@@ -103,6 +104,18 @@
       position: absolute;
       bottom: 5%;
       right: 0%;
+    }
+  }
+
+  // .our-approach {
+  //   position: relative;
+  //   z-index: 3;
+  // }
+  .about-cta {
+    .section-container {
+      &.type-small {
+        max-width: 620px;
+      }
     }
   }
 }

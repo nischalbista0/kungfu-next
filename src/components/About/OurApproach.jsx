@@ -89,7 +89,7 @@ const OurApproach = () => {
         </div>
       </div>
 
-      <div className="custom-container">
+      <div className="custom-container about-cta">
         <div className="section-container type-small center">
           <div className="section-title">
             <h1>Make learning fun with Kungfu Quiz </h1>
