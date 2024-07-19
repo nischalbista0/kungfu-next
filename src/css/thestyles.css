@@ -2233,7 +2233,7 @@ img {
 }
 .challenges .challenges-modes-new .challenges-modes .challenge-mode .detail-container p {
   color: #515151;
-  font-size: clamp(16px, 1.1vw, 20px);
+  font-size: clamp(16px, 1.1vw, 18px);
   line-height: clamp(25px, 1.8vw, 30px);
 }
 .challenges .challenges-modes-new .challenges-modes .challenge-mode .challenge-item-1 {
