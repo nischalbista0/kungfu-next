@@ -176,7 +176,7 @@ h3 {
 
 p {
   margin: 0;
-  font-size: clamp(16px, 1.2vw, 24px);
+  font-size: clamp(16px, 1.1vw, 24px);
   line-height: clamp(25px, 1.8vw, 35px);
 }
 p:not(:last-of-type) {
@@ -1698,6 +1698,9 @@ img {
   padding-top: 40px !important;
   padding-bottom: 40px !important;
 }
+.challenges .challenges-main-container .create-challenge .custom-container .section-container.type-small {
+  max-width: 800px;
+}
 .challenges .challenges-main-container .create-challenge .image-container {
   margin-top: 3rem;
   position: relative;
@@ -2176,10 +2179,16 @@ img {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  max-width: 900px;
+  max-width: 700px;
   padding: 0 40px;
   margin: 0 auto;
   padding-bottom: 100px;
+}
+@media screen and (min-width: 700px) {
+  .challenges .challenges-modes-new {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media screen and (min-width: 1400px) {
   .challenges .challenges-modes-new {
