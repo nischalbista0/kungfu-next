@@ -39,7 +39,12 @@ const ContactForm = () => {
         regarding the mentioned concerns.
       </p>
 
-      <button className="co-btn form-btn">Submit Request</button>
+      {/* <button className="co-btn form-btn">Submit Request</button> */}
+      <div className="section-link" style={{ textAlign: "left" }}>
+        <a href="#" className="co-btn type-field">
+          <span>Join Now</span>
+        </a>
+      </div>
     </form>
   );
 };

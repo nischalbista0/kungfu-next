@@ -783,6 +783,29 @@ img {
   bottom: 0;
   height: 100%;
 }
+.co-btn.type-field {
+  background: #c93228;
+  color: #ffffff;
+}
+.co-btn.type-field:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #aa2b22;
+  transition: all 0.3s ease;
+}
+.co-btn.type-field:hover, .co-btn.type-field:focus, .co-btn.type-field:active {
+  color: #ffffff;
+}
+.co-btn.type-field:hover:after, .co-btn.type-field:focus:after, .co-btn.type-field:active:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
 @media screen and (max-width: 1599px) {
   .co-btn {
     padding: 12px 35px;
@@ -1306,13 +1329,13 @@ img {
 
 .big-cloud-container {
   position: relative;
+  z-index: 2;
 }
 .big-cloud-container #cloudbig {
   position: absolute;
   width: 100%;
   height: auto;
   bottom: 0;
-  z-index: 2;
 }
 
 .swiper-dojo-container {
@@ -1462,7 +1485,7 @@ img {
 .contact .contact-main-container {
   padding-top: 148px;
   position: relative;
-  z-index: 2;
+  z-index: 3;
   min-height: 100vh;
 }
 @media screen and (max-width: 768px) {
@@ -2375,7 +2398,8 @@ img {
   position: relative;
   margin-top: 5%;
   margin-bottom: 17%;
-  padding: 5% 20%;
+  padding: 0 20%;
+  padding-bottom: 5%;
   z-index: 20;
 }
 .homepage-body #home-page .ninja-scroll-container .top-cloud {
@@ -3085,7 +3109,7 @@ img {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 204, 112, 0.9215686275);
+  background-color: #ffcc70;
   display: flex;
   justify-content: center;
   align-items: center;
