@@ -11,7 +11,7 @@ const Footer = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Parallax effect for pillar-right-small
+    // Parallax effect for pillar-small-right
     gsap.to(pillarSmallRef.current, {
       yPercent: 40, // Adjust the value for desired parallax effect
       scale: 0.8,
@@ -72,7 +72,7 @@ const Footer = () => {
       <div className="pillar_container">
         <div className="pillar-left">
           <img
-            src="img/static/footer-pillar-right.png"
+            src="img/static/footer-right-pillar.png"
             alt="Pillar"
             className="pillarbig"
             ref={pillarLeftBigRef}
@@ -85,9 +85,9 @@ const Footer = () => {
 
         <div className="pillar-right">
           <img
-            src="img/static/pillar-right-small.png"
+            src="img/static/pillar-small-right.png"
             alt="Pillar"
-            className="pillar-right-small pillarsmall"
+            className="pillar-small-right pillarsmall"
             ref={pillarSmallRef}
           />
           <img

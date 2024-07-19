@@ -99,14 +99,14 @@ const Header = () => {
     <header id="header-wrapper">
       <div className="custom-container remove-padding-vertical">
         <div className="nav-container">
-          <div className="logo-wrapper">
+          {/* <div className="logo-wrapper">
             <a href="/" className="logo">
               <img src="img/logo/Logo.svg" alt="" />
             </a>
             <a href="/" className="name-logo">
               <img src="img/logo/Name_Logo.svg" alt="" />
             </a>
-          </div>
+          </div> */}
           <div className="nav-bar">
             <div className={navWrapperClassName}>
               <div className="nav-wrapper-inner">
@@ -118,10 +118,14 @@ const Header = () => {
                     <li>
                       <a href="/about">About us</a>
                     </li>
-                  </ul>
-                </div>
-                <div className="menu-menu-container">
-                  <ul id="menu-menu" className="menu">
+                    <li className="logo-wrapper">
+                      <a href="/" className="logo">
+                        <img src="img/logo/Logo.svg" alt="" />
+                      </a>
+                      <a href="/" className="name-logo">
+                        <img src="img/logo/Name_Logo.svg" alt="" />
+                      </a>
+                    </li>
                     <li>
                       <a href="/challenges">Challenges</a>
                     </li>

@@ -364,9 +364,6 @@ img {
 }
 #header-wrapper .custom-container .nav-container .logo-wrapper {
   z-index: 16;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 #header-wrapper .custom-container .nav-container .logo-wrapper .logo {
   width: 130px;
@@ -1314,7 +1311,7 @@ img {
   display: flex;
   width: 45%;
 }
-.pillar_container .pillar-right .pillar-right-small {
+.pillar_container .pillar-right .pillar-small-right {
   position: absolute;
   bottom: 0%;
   width: 109%;
