@@ -2364,7 +2364,7 @@ img {
 .homepage-body #home-page .games-begin .house-container-main .top-cloud-blue img {
   width: 100%;
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
   .homepage-body #home-page .games-begin .house-container-main .top-cloud-white {
     height: 500px;
   }
@@ -2422,7 +2422,6 @@ img {
   margin-top: 5%;
   margin-bottom: 17%;
   padding: 0 20%;
-  padding-bottom: 5%;
   z-index: 20;
 }
 .homepage-body #home-page .ninja-scroll-container .top-cloud {
@@ -2450,7 +2449,7 @@ img {
   position: absolute;
   width: 100%;
   left: 0;
-  top: 95%;
+  top: 98%;
   z-index: 20;
 }
 .homepage-body #home-page .ninja-scroll-container .ninja-scroll {
