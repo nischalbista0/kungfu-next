@@ -3,9 +3,9 @@ import React from "react";
 const HeroSection = () => {
   return (
     <>
-      <div className="challenges-top-cloud">
+      {/* <div className="challenges-top-cloud">
         <img src="/img/static/challenges-cloud-up.png" alt="" />
-      </div>
+      </div> */}
 
       <section className="create-challenge">
         <div className="custom-container">

@@ -1,5 +1,6 @@
 "use client";
 import ChallengesModes from "@/components/Challenges/ChallengesModes";
+import ChallengesModesNew from "@/components/Challenges/ChallengesModesNew";
 import CreateChallengeSection from "@/components/Challenges/CreateChallengeSection";
 import Footer from "@/components/Challenges/Footer";
 import HeroSection from "@/components/Challenges/HeroSection";
@@ -10,10 +11,13 @@ const Challenges = () => {
     <div className="challenges">
       <Header />
 
+      <div className="challenges-bg"></div>
+
       <div className="challenges-main-container">
         <HeroSection />
 
-        <ChallengesModes />
+        {/* <ChallengesModes /> */}
+        <ChallengesModesNew />
       </div>
 
       <div className="challenges-bottom-cloud">

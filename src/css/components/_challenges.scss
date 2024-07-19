@@ -1,15 +1,28 @@
 .challenges {
   overflow-x: hidden;
 
-  #header-wrapper {
+  .challenges-bg {
     background: linear-gradient(0deg, #e0fbff 0%, #e0fbff 0.01%, #bbe7ee 99%);
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
+
+  // #header-wrapper {
+  //   background: linear-gradient(0deg, #e0fbff 0%, #e0fbff 0.01%, #bbe7ee 99%);
+  // }
 
   .challenges-main-container {
     background: #e0fbff;
     position: relative;
     width: 100%;
     padding-top: 148px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 
     @media screen and (max-width: 768px) {
       padding-top: 70px;
@@ -28,6 +41,9 @@
     .create-challenge {
       position: relative;
       z-index: 1;
+      background: url("/img/static/challenges-cloud-up.png") no-repeat;
+      background-size: 100%;
+      background-position: 100% 100px;
 
       // &.section-container .type-small {
       //   max-width: 1200px !important;
@@ -676,6 +692,77 @@
     .section-container {
       &.type-small {
         max-width: 620px;
+      }
+    }
+  }
+
+  .challenges-modes-new {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 900px;
+    padding: 0 40px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    @media screen and (min-width: 1400px) {
+      width: 50vw;
+    }
+
+    .challenges-modes {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      .challenge-mode {
+        display: flex;
+        align-items: start;
+        gap: 2rem;
+
+        // select odd
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+          text-align: right;
+        }
+
+        @media screen and (max-width: 620px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 1.5rem;
+        }
+
+        .image-container {
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+          transition: all 0.4s;
+          min-width: 220px;
+          min-height: 200px;
+        }
+
+        .detail-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          p {
+            color: #515151;
+          }
+        }
+
+        .challenge-item-1 {
+          background-color: #6dcbd3;
+        }
+
+        .challenge-item-2 {
+          background-color: #fecd73;
+        }
+
+        .challenge-item-3 {
+          background-color: #f59495;
+        }
       }
     }
   }
