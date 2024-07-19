@@ -160,7 +160,7 @@ h1 {
 h2 {
   font-family: "General-Sans-600";
   color: #606060;
-  font-size: clamp(16px, 1.4vw, 26px);
+  font-size: clamp(18px, 1.4vw, 26px);
   line-height: clamp(25px, 1.8vw, 30px);
 }
 
@@ -2224,6 +2224,8 @@ img {
 }
 .challenges .challenges-modes-new .challenges-modes .challenge-mode .detail-container p {
   color: #515151;
+  font-size: clamp(16px, 1.1vw, 20px);
+  line-height: clamp(25px, 1.8vw, 30px);
 }
 .challenges .challenges-modes-new .challenges-modes .challenge-mode .challenge-item-1 {
   background-color: #6dcbd3;

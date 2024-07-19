@@ -2,7 +2,7 @@ import React from "react";
 
 const ChallengesModesNew = () => {
   return (
-    <div className="challenges-modes-new ">
+    <div className="challenges-modes-new" id="content-wrapper">
       <h1 className="type-secondary-color">Modes</h1>
 
       <div className="challenges-modes">
