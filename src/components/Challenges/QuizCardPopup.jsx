@@ -1,10 +1,21 @@
-import { userPointsAtom, submittedAnswersAtom } from "@/atoms/atoms";
+import {
+  userPointsAtom,
+  submittedAnswersAtom,
+  quizCompletionAtom,
+} from "@/atoms/atoms";
 import { useAtom } from "jotai";
 import React, { useState, useEffect } from "react";
 
-const QuizCardPopup = ({ setShowPopup, showPopup, quizItem, play }) => {
+const QuizCardPopup = ({
+  setShowPopup,
+  showPopup,
+  quizItem,
+  play,
+  allQuizzes,
+}) => {
   const [userPoints, setUserPoints] = useAtom(userPointsAtom);
   const [submittedAnswers, setSubmittedAnswers] = useAtom(submittedAnswersAtom);
+  const [quizCompletion, setQuizCompletion] = useAtom(quizCompletionAtom);
   const [selectedOption, setSelectedOption] = useState(null);
   const isSubmitted = submittedAnswers[quizItem.question];
 
@@ -30,9 +41,14 @@ const QuizCardPopup = ({ setShowPopup, showPopup, quizItem, play }) => {
         [quizItem.question]: selectedOption,
       });
     }
+
     setShowPopup(false);
     play();
   };
+
+  // useEffect(() => {
+  //   console.log(submittedAnswers);
+  // }, [submittedAnswers]);
 
   return (
     <div className="quiz-card-main-container">
@@ -40,7 +56,6 @@ const QuizCardPopup = ({ setShowPopup, showPopup, quizItem, play }) => {
         <div className="quiz-card">
           <div className="quiz-qa">
             <h2 className="quiz-detail">{quizItem.title}</h2>
-
             <h2 className="question">{quizItem.question}</h2>
 
             <div className="quiz-options">

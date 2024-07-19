@@ -818,6 +818,10 @@ img {
   outline: none;
   position: relative;
   align-self: flex-end;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
 }
 .kungfu-btn img {
   position: absolute;
@@ -2941,7 +2945,7 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2862745098);
+  background-color: #000;
   z-index: 2000;
 }
 .kfq-sample-section .quiz-card-container {
@@ -2967,6 +2971,24 @@ img {
   flex-direction: column;
   gap: 0.6rem;
   justify-content: space-between;
+}
+.kfq-sample-section .quiz-card-container .quiz-card::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://ka.kungfuquiz.com/assets/Wonder-35e39a25.svg");
+  width: 141.49px;
+  height: 169px;
+  left: -127.81px;
+  bottom: -47px;
+  background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+  .kfq-sample-section .quiz-card-container .quiz-card::before {
+    width: 100px;
+    height: 120px;
+    left: -90px;
+    bottom: -30px;
+  }
 }
 .kfq-sample-section .quiz-card-container .quiz-card .quiz-qa {
   display: flex;
@@ -3056,6 +3078,107 @@ img {
 .kfq-sample-section .quiz-card-container .quiz-card .submit-btn {
   margin-top: 1rem;
   cursor: pointer;
+}
+.kfq-sample-section .completion-popup-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 204, 112, 0.9215686275);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+.kfq-sample-section .completion-popup-container {
+  display: grid;
+  gap: 20px;
+  background-color: #faf6eb;
+  max-height: 75%;
+  width: 100%;
+  border-radius: 8px;
+  max-width: 75%;
+  padding: 80px;
+  grid-template-rows: max-content auto max-content;
+  height: 100%;
+  position: relative;
+  font-family: "General-Sans-600";
+}
+.kfq-sample-section .completion-popup-container::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://ka.kungfuquiz.com/assets/leaderboardPanda-9e0ba464.svg");
+  width: 141.49px;
+  height: 169px;
+  left: -127.81px;
+  bottom: -47px;
+  background-size: cover;
+}
+@media screen and (max-width: 1024px) {
+  .kfq-sample-section .completion-popup-container::before {
+    width: 100px;
+    height: 120px;
+    left: -90px;
+    bottom: -30px;
+  }
+}
+.kfq-sample-section .completion-popup-container ._hansLarge_kzf5d_70 {
+  line-height: 125%;
+  font-size: 1.5rem !important;
+  font-weight: 400;
+}
+.kfq-sample-section .completion-popup-container ._typographyPrimary_kzf5d_25 {
+  color: #ffcc70;
+  fill: #ffcc70;
+  text-shadow: 1px 1px #868686;
+  text-align: center;
+}
+.kfq-sample-section .completion-popup-container ._typographyTertiary_kzf5d_41 {
+  color: #968a79;
+  fill: #968a79;
+  text-shadow: 1px 1px #d6d6d6;
+}
+.kfq-sample-section .completion-popup-container ._hans20_kzf5d_84 {
+  line-height: 125%;
+  font-size: 1.25rem !important;
+  font-weight: 600;
+  text-align: center;
+  font-family: "BIZUD-Regular";
+}
+.kfq-sample-section .completion-popup-container .vtsack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+}
+.kfq-sample-section .completion-popup-container ._leaderBoard_1cqae_70 {
+  margin-top: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+.kfq-sample-section .completion-popup-container ._leaderBoard--card_1cqae_75 {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  background-color: #faedca;
+  border-radius: 12px;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.kfq-sample-section .completion-popup-container .hstack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+}
+.kfq-sample-section .completion-popup-container ._leaderBoard--avatar_1cqae_87 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem !important;
+  margin: 1rem !important;
 }
 
 /*------------------------------------ Site Wide Starts -----------------------------------*/

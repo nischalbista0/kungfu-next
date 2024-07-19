@@ -15,8 +15,9 @@ import {
 } from "react-icons/fa";
 import quizData from "../../data/quizQuestions.json";
 import QuizCardPopup from "./QuizCardPopup";
-import { submittedAnswersAtom } from "@/atoms/atoms";
+import { quizCompletionAtom, submittedAnswersAtom } from "@/atoms/atoms";
 import { useAtom } from "jotai";
+import QuizCompletionPopup from "./QuizCompletionPopup";
 
 // Function to convert timestamp to seconds
 const convertToSeconds = (timeString) => {
@@ -490,6 +491,44 @@ const CreateChallengeSection = () => {
 
   const [showPopup, setShowPopup] = useState(false);
   const [quizItems, setQuizItems] = useState([]);
+  const [showQuizCompletionPopup, setShowQuizCompletionPopup] =
+    useAtom(quizCompletionAtom);
+
+  useEffect(() => {
+    const video = document.querySelector("video");
+
+    const checkTimestamp = () => {
+      quizData.quiz.forEach((quizItem) => {
+        if (
+          convertToSeconds(quizItem.timestamp) <= video.currentTime &&
+          !submittedAnswers[quizItem.question]
+        ) {
+          video.pause();
+          setIsPlaying(false);
+          setQuizItems(quizItem);
+          setShowPopup(true);
+        }
+      });
+    };
+
+    video.addEventListener("timeupdate", checkTimestamp);
+
+    return () => {
+      video.removeEventListener("timeupdate", checkTimestamp);
+    };
+  }, [submittedAnswers]);
+
+  // Check if all questions have been answered
+  // Object.keys(submittedAnswers).length === quizData.quiz.length - 1;
+  // if (allAttempted) {
+  //   setQuizCompletion(true);
+  // }
+
+  useEffect(() => {
+    Object.keys(submittedAnswers).length === quizData.quiz.length
+      ? setShowQuizCompletionPopup(true)
+      : setShowQuizCompletionPopup(false);
+  }, [submittedAnswers]);
 
   return (
     <section id="content-wrapper">
@@ -661,8 +700,11 @@ const CreateChallengeSection = () => {
               showPopup={showPopup}
               quizItem={quizItems}
               play={play}
+              allQuizes={quizData}
             />
           )}
+
+          {showQuizCompletionPopup && <QuizCompletionPopup />}
         </section>
       </div>
     </section>
